@@ -599,8 +599,8 @@ function applyPoolLabels() {
     const annotation = {
         label: "pool",
         radius: 5,
-        color: "#2ea3dd",
-        background: "rgba(35, 33, 87, 0.88)"
+        color: "#1d9bf0",
+        background: "rgba(11, 99, 206, 0.88)"
     };
     record.workspace.controls.source.setAnnotations([{ ...annotation, ...sourceCenter }], { silent: true });
     record.workspace.controls.destination.setAnnotations([{ ...annotation, ...destinationCenter }], { silent: true });

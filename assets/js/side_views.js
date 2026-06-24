@@ -156,7 +156,7 @@ export function draw_traj(data, D3Instance = d3) {;
             .attr("r", 4)
             .attr("num", (_, i) => i)
             .attr("swim", selected_swim)
-            .style("fill", "rgba(35, 33, 87, 1)")
+            .style("fill", "rgba(11, 99, 206, 1)")
             .style("stroke", "#555555");
         xscale = D3Instance.scaleLinear([0, maxFrame / frame_rate], [22, 190]);
 
@@ -220,7 +220,7 @@ export function drawCycleBars(data, d3Instance = d3) {
 
         svg.append("g")
             .attr("class", "bars")
-            .attr("fill", "rgba(35, 33, 87, 1)")
+            .attr("fill", "rgba(11, 99, 206, 1)")
             .selectAll("rect")
             .data(metricData)
             .join("rect")
@@ -278,7 +278,7 @@ export function drawCycleTimeBars(data) {
 
         svg.append("g")
             .attr("class", "bars")
-            .attr("fill", "rgba(35, 33, 87, 1)")
+            .attr("fill", "rgba(11, 99, 206, 1)")
             .selectAll("rect")
             .data(metricData)
             .join("rect")

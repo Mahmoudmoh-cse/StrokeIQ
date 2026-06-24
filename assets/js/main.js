@@ -178,8 +178,8 @@ export function setGrad(curr) {
             'rgba(255,0,0,1) ' + (curr * 100) + '%, ' +
             'rgba(255,0,0,0.3) ' + (curr * 100 + 0.00001) + '%, '
             + 'rgba(255,0,0,0.3) ' + ((st - 0.001) * 100) + '%,'
-            + 'rgba(35,33,87,0.3)' + (st * 100) + '%,'
-            + 'rgba(35,33,87,0.3) ' + ((end / vid_end) * 100) + '%,'
+            + 'rgba(11,99,206,0.3)' + (st * 100) + '%,'
+            + 'rgba(11,99,206,0.3) ' + ((end / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,0.3) ' + (((end - 0.001) / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,0.3) ' + (100) + '%'
             + ')'
@@ -189,10 +189,10 @@ export function setGrad(curr) {
             'linear-gradient(to right,' +
             'rgba(255,0,0,1) 0%, '
             + 'rgba(255,0,0,1)' + ((st - 0.001) * 100) + '%,'
-            + 'rgba(35,33,87,1)' + (st * 100) + '%,'
-            + 'rgba(35,33,87,1)' + (curr * 100) + '%, '
-            + 'rgba(35,33,87,0.3)' + (curr * 100 + 0.00001) + '%, '
-            + 'rgba(35,33,87,0.3)' + ((end / vid_end) * 100) + '%,'
+            + 'rgba(11,99,206,1)' + (st * 100) + '%,'
+            + 'rgba(11,99,206,1)' + (curr * 100) + '%, '
+            + 'rgba(11,99,206,0.3)' + (curr * 100 + 0.00001) + '%, '
+            + 'rgba(11,99,206,0.3)' + ((end / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,0.3)' + (((end - 0.001) / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,0.3)' + (100) + '%'
             + ')'
@@ -202,8 +202,8 @@ export function setGrad(curr) {
             'linear-gradient(to right,'
             + 'rgba(255,0,0,1) 0%, '
             + 'rgba(255,0,0,1)' + ((st - 0.001) * 100) + '%,'
-            + 'rgba(35,33,87,1)' + (st * 100) + '%,'
-            + 'rgba(35,33,87,1)' + ((end / vid_end) * 100) + '%,'
+            + 'rgba(11,99,206,1)' + (st * 100) + '%,'
+            + 'rgba(11,99,206,1)' + ((end / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,1)' + (((end - 0.001) / vid_end) * 100) + '%,'
             + 'rgba(255,0,0,1)' + (curr * 100) + '%, '
             + 'rgba(255,0,0,0.3)' + (curr * 100 + 0.00001) + '%, '
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Redirige vers la page GitHub des releases
  */
 function downloadVersion() {
-    window.open('https://github.com/centralelyon/aquanote/releases/tag/version.1.0.0', '_blank')
+    window.open('https://github.com/Mahmoudmoh-cse/StrokeIQ', '_blank')
 
 }
 
@@ -430,7 +430,7 @@ function downloadVersion() {
 function downloadRaccourcis() {
     const link = document.createElement('a');
     link.href = './assets/aide/Raccourcis_clavier_V2.jpg'; // Chemin vers ton image
-    link.download = 'Aquanote_shortcuts.jpg';
+    link.download = 'StrokeIQ_shortcuts.jpg';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -157,7 +157,7 @@ table tr {
 .line_tool {
     font-family: Roboto, sans-serif;
     font-weight: 700;
-    background-color: #232156;
+    background-color: #0b63ce;
     color: #FFF;
 }
 
@@ -185,7 +185,7 @@ table tr {
 
 #timebar::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    background-color: rgba(35, 33, 87, 0.95);
+    background-color: rgba(11, 99, 206, 0.95);
     border: 1px solid aliceblue;
     height: 20px;
     width: 20px;
@@ -196,7 +196,7 @@ table tr {
 
 #poolop {
     width: 100%;
-    background: linear-gradient(to right, rgba(35, 33, 87, 1) 0%, rgba(35, 33, 87, 1) 100%, #fff 1000%, #fff 100%);
+    background: linear-gradient(to right, rgba(11, 99, 206, 1) 0%, rgba(11, 99, 206, 1) 100%, #fff 1000%, #fff 100%);
     border: solid 1px #555555;
     border-radius: 8px;
     height: 7px;
@@ -209,7 +209,7 @@ table tr {
 
 #poolop::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    background-color: rgba(35, 33, 87, 0.95);
+    background-color: rgba(11, 99, 206, 0.95);
     border: 1px solid aliceblue;
     height: 15px;
     width: 15px;
@@ -236,7 +236,7 @@ table tr {
     font-weight: 900;
     font-size: 22pt;
     line-height: 0;
-    background-color: rgba(35, 33, 87, 1);
+    background-color: rgba(11, 99, 206, 1);
     color: aliceblue;
 }
 
@@ -286,7 +286,7 @@ table {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #232157;
+    background-color: #0b63ce;
     border-radius: 50%;
     cursor: -moz-grab;
     cursor: -webkit-grab;
@@ -298,7 +298,7 @@ table {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #232157;
+    background-color: #0b63ce;
     border-radius: 50%;
     cursor: -moz-grab;
     cursor: -webkit-grab;
@@ -309,7 +309,7 @@ table {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #232157;
+    background-color: #0b63ce;
     border-radius: 50%;
     cursor: -moz-grab;
     cursor: -webkit-grab;
@@ -371,7 +371,7 @@ table {
 
 .__range-step-popup output {
     position: absolute;
-    background-color: #017ea6;
+    background-color: #0b63ce;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -397,7 +397,7 @@ table {
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 10px solid #017ea6;
+    border-top: 10px solid #0b63ce;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     top: 90%;
@@ -428,7 +428,7 @@ table {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #232157;
+    border: 2px solid #0b63ce;
     border-radius: 50%;
     outline: none;
     margin-right: 8px;
@@ -437,14 +437,14 @@ table {
   }
 
   .radio-option input[type="radio"]:checked {
-    background-color: #232157;
+    background-color: #0b63ce;
   }
 
   .radio-option input[type="checkbox"] {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #232157;
+    border: 2px solid #0b63ce;
     border-radius: 4px;
     outline: none;
     margin-right: 8px;
@@ -454,7 +454,7 @@ table {
   }
 
   .radio-option input[type="checkbox"]:checked {
-    background-color: #232157;
+    background-color: #0b63ce;
   }
 
   .radio-option input[type="checkbox"]:checked::after {
@@ -541,11 +541,11 @@ table {
 }
 
 input:checked + .slider {
-    background-color: #5853DA;
+    background-color: #2563eb;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #5853DA;
+    box-shadow: 0 0 1px #2563eb;
 }
 
 input:checked + .slider:before {
@@ -600,12 +600,12 @@ input:checked + .slider:before {
     background-color: #A0A0F5
 }
 .mode-enter{
-    background-color:#2ea3dd
+    background-color:#1d9bf0
 
 }
 
 .mode-end{
-    background-color:green
+    background-color: #0b63ce
 
 }
 .mode-cycle-fade{
@@ -806,7 +806,7 @@ input[type="text"], .time_input{
     display: block;
     margin: 0 0;
     padding: 5px 5px;
-    background-color: rgba(35, 33, 87, 1);
+    background-color: rgba(11, 99, 206, 1);
     color:rgb(255, 255, 255)
 }
 
@@ -819,7 +819,7 @@ input[type="text"], .time_input{
 }
 
 .dark-select{
-    background-color: rgba(35, 33, 87, 1);
+    background-color: rgba(11, 99, 206, 1);
     color:rgb(255, 255, 255)
 }
 
@@ -834,16 +834,16 @@ input[type="text"], .time_input{
 }
 
 .gr{
-    background-color: green;
+    background-color: #0b63ce;
 }
 #clr {
-    background-color: #2ea3dd; 
+    background-color: #1d9bf0; 
     border: none; 
     color: white; 
     
 }
 #botn{
-    background-color: green;
+    background-color: #0b63ce;
     color: white;
 }
 
@@ -963,7 +963,7 @@ padding: 20px;
     
         /* Basic styling for the nav bar */
     #r_header {
-        background-color: darkgreen;
+        background-color: #0b63ce;
     }
     
     #options {
@@ -1091,7 +1091,7 @@ padding: 20px;
 
 #serv {
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #0b63ce;
     color: white;
     border: none;
     border-radius: 4px;

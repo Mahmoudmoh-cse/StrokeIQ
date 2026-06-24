@@ -113,8 +113,8 @@ window.onkeydown = function (e) {
             let val2 = val + 0.0001;
             elem.css('background',
                 'linear-gradient(to right,'
-                + 'rgba(35, 33, 87, 1) 0%, '
-                + 'rgba(35, 33, 87, 1) ' + (val * 100) + '%, '
+                + 'rgba(11, 99, 206, 1) 0%, '
+                + 'rgba(11, 99, 206, 1) ' + (val * 100) + '%, '
                 + '#FFF ' + (val2 * 100) + '%, '
                 + '#FFF 100%) '
             );
@@ -133,8 +133,8 @@ window.onkeydown = function (e) {
             let val2 = val + 0.0001;
             elem.css('background',
                 'linear-gradient(to right,'
-                + 'rgba(35, 33, 87, 1) 0%, '
-                + 'rgba(35, 33, 87, 1) ' + (val * 100) + '%, '
+                + 'rgba(11, 99, 206, 1) 0%, '
+                + 'rgba(11, 99, 206, 1) ' + (val * 100) + '%, '
                 + '#FFF ' + (val2 * 100) + '%, '
                 + '#FFF 100%) '
             );

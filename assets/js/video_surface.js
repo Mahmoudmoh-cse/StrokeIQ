@@ -248,7 +248,7 @@ function drawPoolLaneOverlay() {
         const boxHeight = 20;
         context.fillStyle = "rgba(255, 255, 255, 0.78)";
         context.fillRect(center.x - boxWidth / 2, center.y - boxHeight / 2, boxWidth, boxHeight);
-        context.fillStyle = "rgba(35, 33, 87, 0.92)";
+        context.fillStyle = "rgba(11, 99, 206, 0.92)";
         context.fillText(text, center.x, center.y);
     }
 

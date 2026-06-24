@@ -88,8 +88,8 @@ function setRangeFill(elem, value) {
 
     elem.css('background',
         'linear-gradient(to right,'
-        + 'rgba(35, 33, 87, 1) 0%, '
-        + 'rgba(35, 33, 87, 1) ' + percent + '%, '
+        + 'rgba(11, 99, 206, 1) 0%, '
+        + 'rgba(11, 99, 206, 1) ' + percent + '%, '
         + '#FFF ' + (percent + 0.01) + '%, '
         + '#FFF 100%) '
     );
@@ -205,14 +205,14 @@ export function clampSelectedSwim(laneCount) {
             // colorize step options
             ctrl.querySelectorAll("option").forEach(function (opt) {
                 if (opt.value <= el.valueAsNumber)
-                    opt.style.backgroundColor = '#232157';
+                    opt.style.backgroundColor = '#0b63ce';
                 else
                     opt.style.backgroundColor = '#aaa';
             });
             // colorize before and after
             let valPercent = (el.valueAsNumber - parseInt(el.min)) / (parseInt(el.max) - parseInt(el.min));
             let style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(' +
-                valPercent + ', #232157), color-stop(' +
+                valPercent + ', #0b63ce), color-stop(' +
                 valPercent + ', #aaa));width:160px';
             el.style = style;
 
@@ -662,8 +662,8 @@ export function clampSelectedSwim(laneCount) {
 
         elem.css('background',
             'linear-gradient(to right,'
-            + 'rgba(35, 33, 87, 1) 0%, '
-            + 'rgba(35, 33, 87, 1) ' + (val * 100) + '%, '
+            + 'rgba(11, 99, 206, 1) 0%, '
+            + 'rgba(11, 99, 206, 1) ' + (val * 100) + '%, '
             + '#FFF ' + (val2 * 100) + '%, '
             + '#FFF 100%) '
         )
@@ -1599,7 +1599,7 @@ let pt=[0,0];
             const displayEnd = videoPointToDisplay(pts[1], meta);
             const displayScale = displayStart?.k ?? (vid.offsetWidth / twidth);
             can.height = Math.max(1, Math.round(eucDistance(pts[0], pts[1]) * displayScale)) //+ 10
-            let pointer_color = "#232156" //"rgba(35, 33, 86, 0.2)"
+            let pointer_color = "#0b63ce" //"rgba(35, 33, 86, 0.2)"
 
             if(mode in mode_color){
                 pointer_color = mode_color[mode]

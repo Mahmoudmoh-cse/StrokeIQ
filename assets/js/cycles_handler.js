@@ -126,8 +126,8 @@ export function makeBar(data, idx, idswim, scale, elemSize, vidSize, meta) {
  */
 export function highlightCycle(swim, num) {
     // Remettre d'abord toutes les barres à leur couleur d'origine
-    d3.selectAll("rect").style("fill", "rgba(35, 33, 87, 1)")
-    d3.selectAll(".cycleDots").style("fill", "rgba(35, 33, 87, 1)")
+    d3.selectAll("rect").style("fill", "rgba(11, 99, 206, 1)")
+    d3.selectAll(".cycleDots").style("fill", "rgba(11, 99, 206, 1)")
     
     d3.selectAll(".hcans2").attr("class", "crop_can")
 
@@ -151,10 +151,10 @@ export function resetHigh() {
     d3.selectAll(".hcans2").attr("class", "crop_can")
 
     d3.selectAll(".crop_can").style("opacity", 1)
-    d3.selectAll("rect").style("opacity", 1).style("fill", "rgba(35, 33, 87, 1)")
+    d3.selectAll("rect").style("opacity", 1).style("fill", "rgba(11, 99, 206, 1)")
     d3.selectAll("circle").style("opacity", 1)
 
-    d3.selectAll(".cycleDots").style("fill", "rgba(35, 33, 87, 1)").style("opacity", 1)
+    d3.selectAll(".cycleDots").style("fill", "rgba(11, 99, 206, 1)").style("opacity", 1)
 }
 
 /**
