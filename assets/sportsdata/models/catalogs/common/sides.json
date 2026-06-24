@@ -1,0 +1,14 @@
+{
+  "id": "common.sides",
+  "title": "Sides",
+  "values": [
+    {
+      "id": "left",
+      "label": "Left"
+    },
+    {
+      "id": "right",
+      "label": "Right"
+    }
+  ]
+}

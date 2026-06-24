@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="228" viewBox="0 0 230 228">
+  <!-- Cercle de fond bleu -->
+  <circle cx="115" cy="114" r="110" fill="#fff" stroke="none"/>
+  <!-- Lettre A stylisée blanche -->
+  <text x="118" y="125" text-anchor="middle" font-size="240" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="darkgreen" dominant-baseline="middle" style="letter-spacing:0.02em;">A</text>
+</svg>

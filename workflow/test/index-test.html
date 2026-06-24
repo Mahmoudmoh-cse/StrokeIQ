@@ -1,0 +1,613 @@
+<!--
+@file index.html
+@brief Interface web principale pour l'annotation de vidéos de natation
+Contient l'interface utilisateur complète avec lecteur vidéo, outils d'annotation,
+graphiques D3.js et contrôles pour analyser les performances des nageurs
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Annotation Natation - Test Environment</title>
+    <meta name="description" content="">
+    <meta name="author" content="Theo Jaunet, Enzo Cartal">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval'; connect-src 'self' http://127.0.0.1:* http://localhost:*; media-src 'self' http://127.0.0.1:* http://localhost:*; img-src 'self' data:; script-src 'self' 'unsafe-eval';">
+    <script src="assets/js/d3.v7.min.js"></script>
+    <script src="assets/js/perspective-transform.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/base64.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/global-refactor.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico"> -->
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    
+
+    <style>
+        /* Indicateur d'environnement de test */
+        body::before {
+            content: "🧪 TEST ENVIRONMENT";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ff6b35;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            z-index: 9999;
+            padding: 4px;
+            font-size: 11px;
+        }
+        
+        body {
+            margin-top: 24px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div id="r_header">
+        
+        <div id="options" class="display-block">
+            <div id="r_logo-box">
+                <a href="/" id="r_logo-href">
+                    <div>
+                        <img id="logo" src="assets/images/logo.svg">
+                    </div>
+                    <div id="thisis">
+                        <div>Neptune</div>
+                        <div id="r_version">
+                            <!-- <p onclick="downloadVersion(); return false;">Version: <span id="app-version"></span></p> -->
+                            <p id="version-link">Version: <span id="app-version"></span></p>
+                           
+                        </div>
+                    </div>
+                </a>
+    
+            </div>
+            
+            <div id="r_competition-box">
+                <label id="r_competition-label" for="competition">Competition</label>
+                <select class="u-half-width" id="competition">
+
+                </select>
+            </div>
+            <div id="r_course-box">
+                <div class="r_info_course-box">
+                    <label class="r_course-label" for="run_part1">Type nage</label>
+                    <select class="u-half-width" id="run_part1">
+                        <!-- Options dynamiques ajoutées ici -->
+                    </select>
+                </div>
+                <div class="r_info_course-box">
+                    <label class="r_course-label" for="run_part2">sexe nageurs</label>
+                    <select class="u-half-width" id="run_part2">
+                        <!-- Options dynamiques ajoutées ici -->
+                    </select>
+                </div>
+                <div class="r_info_course-box">
+                    <label class="r_course-label" for="run_part3">distance</label>
+                    <select class="u-half-width" id="run_part3">
+                        <!-- Options dynamiques ajoutées ici -->
+                    </select>
+                </div>
+                <div>
+                    <label class="r_course-label" for="run_part4">course</label>
+                    <select class="u-half-width" id="run_part4">
+                        <!-- Options dynamiques ajoutées ici -->
+                    </select>
+                </div>
+            </div>
+            <div id="r_data-box">
+                <label for="temp">Données</label>
+                <select class="u-half-width" id="temp">
+                </select>
+
+            </div>
+            <div id="r_buttons-action">
+                <button id="loadbtn" class="gr"> Charger</button>
+                <!--Bouton de probleme -->
+
+
+
+
+               
+            </div>
+        </div>
+        <ul id="workspace-tabs" class="workspace-tabs" role="tablist">
+            <li><button id="workspace-tab-annotate" class="workspace-tab active" type="button" role="tab" aria-selected="true" aria-controls="annotate_view" data-workspace-target="annotate_view">Annotate</button></li>
+            <li><button id="workspace-tab-calibrate" class="workspace-tab" type="button" role="tab" aria-selected="false" aria-controls="calibrate_view" data-workspace-target="calibrate_view">Calibrate</button></li>
+            <li><button id="workspace-tab-metadata" class="workspace-tab" type="button" role="tab" aria-selected="false" aria-controls="metadata_view" data-workspace-target="metadata_view">Metadata</button></li>
+            <li><button id="workspace-tab-synchronize" class="workspace-tab" type="button" role="tab" aria-selected="false" aria-controls="synchronize_view" data-workspace-target="synchronize_view">Synchronize</button></li>
+        </ul>
+    </div>
+
+    <div id="annotate_view" class="container workspace-view workspace-view-active video-size-small" role="tabpanel" aria-labelledby="workspace-tab-annotate">
+
+        <div class="row">
+            <div class="ten columns">
+
+                <div id="vid-cont">
+                    <div id="video">
+                        <div id="crops">
+                        </div>
+
+                        <video id="vid" preload="auto" type="video/mp4" crossorigin="anonymous">
+                            <source id="vid_src" src="">
+                        </video>
+                    </div>
+                </div>
+                <div id="r_btn-controls">
+
+
+                    <!-- <div class="dropdown">
+                        <button class="dropbtn">⚙️</button>
+                        <div class="dropdown-content">
+                            
+                        </div>
+                    </div> -->
+
+
+                    <div id="r_bloc-buttons">
+                        <div id="controls">
+                            <img id="race-start" src="assets/images/controls/skip-previous.svg" title="Race start" alt="Race start">
+                            <img id="prev-chck" src="assets/images/controls/left-arrow2.svg">
+                            <img id="prev-frame" src="assets/images/controls/left-arrow.svg">
+                            <img id="play" src="assets/images/controls/play-sign.svg">
+                            <img id="next-frame" src="assets/images/controls/right-arrow.svg">
+                            <img id="next-chk" src="assets/images/controls/skip-next.svg">
+
+                            <input type="range" min="0.1" max="2" step="0.1" id="poolop" value="1">
+                            <p id="speed">x1</p>
+                            
+                            
+                          
+                              
+                              <div class="__range __range-step">
+                                  <input type="range" min="0" max="2" value="0" id="kmod" list="ticks1">
+                                  <datalist id="ticks1">
+                                      <option value="0"><span class="kmod_lab">swim</span></option>
+                                      <option value="1"><span class="kmod_lab">last</span></option>
+                                      <option value="2"><span class="kmod_lab">aucun</span></option>
+                                  </datalist>
+                              </div>
+                              
+                            
+
+<!-- <div>
+    <select id="quality" class="dark-select">
+        <option value="">qualité vidéo</option>
+    </select>
+</div> -->
+<div id="volume_range_all">
+    <input type="range" min="0" max="1" step="0.05" id="volume_range" value="0">
+    <p id="volume">🔇</p>
+</div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <input id="timebar" type="range" min="0" max="100" step="0.001" value="0.0">
+                   
+                    <div id="nodule"></div>
+                </div>
+                <div class="ten columns" id="r_div-btn">
+                    <div id="buttons">
+
+                    </div>
+
+                  
+                    
+                    <div id="bottom_data">
+                        
+                        <!-- Appliquer la classe stylisée aux boutons du menu -->
+                        <button class="modebtn mode-enter" name="enter" id="btn-enter">Entree dans l'eau</button>
+                        <button class="modebtn mode-end" name="end" id="btn-end"> Fin de coulée</button>
+                        <button class="modebtn mode-section" name="section" id="hidd">Intermed</button>
+                        <button id="ligneRef">Section</button>
+                        <button class="modebtn mode-cycle-fade r_boutons active selected" name="cycle" id="btn-cycle">Cycle</button>
+                        <button class="modebtn mode-respi-fade" name="respi" id="btn-respi">Respi</button>
+                        <select class="u-half-width" id="video_size_select" aria-label="Taille video" title="Taille video">
+                            <option value="small" selected>small video</option>
+                            <option value="medium">medium video</option>
+                            <option value="large">large video</option>
+                        </select>
+                        <br>
+                        
+                        <div class="radio-group" id="cote_action_group">
+                        <div class="radio-option">
+                            <input type="radio" name="cote_action" id="gauche" value="0">
+                            <label for="gauche">gauche</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="cote_action" id="neutre" value="1" checked>
+                            <label for="neutre">neutre</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="cote_action" id="droite" value="2">
+                            <label for="droite">droite</label>
+                        </div>
+                        <div class="radio-option checkbox-option">
+                            <input type="checkbox" id="show_pool_boundaries">
+                            <label for="show_pool_boundaries">piscine</label>
+                        </div>
+                        <div class="radio-option checkbox-option">
+                            <input type="checkbox" id="show_flash_marker">
+                            <label for="show_flash_marker">flash</label>
+                        </div>
+                        </div>
+                        <br>
+                                   
+                                
+                                <button id="vidsw">Changer côté</button>
+                                <button id="hidlab">Cacher texte</button>
+                                <button id="resetZoom" class="r_boutons">Reset Zoom</button>
+                                <button id="download">Téléchargement</button>
+                                <div class="vid_dessus">
+                                    <button id="vid_dessus">vue de dessus</button>
+                                </div>
+                                
+                        
+                  
+                <div id="swimmerNameForData" class="center"></div>
+
+     
+
+               
+
+            </div>
+                </div>
+
+            </div>
+            <div class="two columns" id="r_graph-box">
+               
+                
+                <div id="r_select-swimmer">
+                    <label for="swim_switch">Ligne sélectionnée</label>
+                    <div class="select-and-button">
+                        
+                        
+                        
+                      
+                        <select class="u-half-width" id="swim_switch"></select>
+
+                    </div>
+                        <button id="botn"><b>Valider </b></button>
+                        <button id="clr"><b>Supprimer Ligne</b></button>
+
+                </div>
+
+ 
+
+
+                        
+                   
+
+                
+                
+
+                
+                
+                <!-- Tab links -->
+                <div class="tab tab-side flex-space-between">
+                    <button class="sideTabLinks active" id="tab-data-entry">⏱</button>
+                    <button class="sideTabLinks" id="tab-verification-charts">📊</button>
+                    <button class="sideTabLinks" id="tab-data-plot-tout">📋</button>
+                    <button class="sideTabLinks" id="tab-modify-selected-annotation">🛠</button>
+                    <!-- <button class="sideTabLinks" id="tab-parameters">⚙️</button> -->
+                </div>
+
+                
+                
+                
+                
+                
+                  <!-- Tab Content Data entry-->
+                  <div id="data_plot_tout" class="side_tab_content">
+                    <label>Tous les cycles</label>
+
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Temps</th>
+                                <th>Distance</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_bod" height="200">
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+                
+                
+                
+                
+                <!-- Tab Content Chart-->
+                <div id="verification_charts" class="side_tab_content">
+                    <label>Graphs</label>
+                    <p id="r_p-distance-per-cycle">Distance par cycle
+                    </p>
+                    <svg id="cyclebar" viewBox="0 0 200 200">
+
+                    </svg>
+
+                    <div id="r_div-per-second">
+                        <p>Distance par
+                            seconde</p>
+                        <svg id="stats" viewBox="0 0 200 200">
+
+                        </svg>
+                    </div>
+
+
+                    <div id="r_div-cycle-frequency">
+                        <p>Fréquence de cycle par vitesse</p>
+                        <svg id="cycle_stats" viewBox="0 0 200 200">
+
+                        </svg>
+
+                    </div>
+                </div>
+
+               
+                
+               
+                
+                <div id="data_entry" class="side_tab_content">
+                    
+                    
+                    
+                    
+                    
+                    
+                    <label>Temps Officiels</label>
+                    <div id="time_table">
+                        
+                        <table class="data_entry_table">
+                            
+
+                            <tbody>
+                                <tr>
+                                    <td class="td-padding-right-14">Demarr </td>
+                                    <td><input type="text" id="editStartTime" class="time_input"></td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <table class="data_entry_table" id="temps_officiels">
+
+                            <tbody>
+                                   
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab Content Last entry-->
+                <div id="last_entry" class="side_tab_content">
+                    <label>Dernières annotations</label>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Temps</th>
+                                <th>Dist</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="last_data_entry_table" height="200"></tbody>
+                    </table>
+                </div>
+
+
+                
+
+                <!-- Tab Content Last entry-->
+                <div id="modify_selected_annotation" class="side_tab_content">
+                    <label>Modifications</label>
+                    <p id="modify_selected_annotation_error">Aucune annotation n'a été selectionnée</p>
+                    <div id="modify_selected_annotation_top_table">
+                        <table class="center">
+                            <thead>
+                                <tr>
+                                    <th>Temps</th>
+                                    <th>Dist</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modify_selected_annotation_table" height="40"></tbody>
+                        </table>
+                        <button id="del"><img src="assets/images/controls/bin.png"></button>
+                        <button id="left-m"> < </button><button id="right-m"> > </button>
+                        <p>&nbsp</p>
+                        <p class="shortParagraph">Déplacement de correction (cm) : </p>
+                        <input type="number" id="deplacementCorrection" value = 5>
+
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="row">
+
+
+        </div>
+
+        
+
+        
+
+
+
+        
+
+        <div id="dialog-mezzi" title="Valider annotation">
+            <p id="fir"> </p>
+            <p id="moh"></p>
+           
+            
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    <div id="calibrate_view" class="container workspace-view" role="tabpanel" aria-labelledby="workspace-tab-calibrate" hidden>
+        <section id="video_configuration" class="calibration-panel">
+            <label>Configuration vidéo</label>
+                <div class="video-config-actions">
+                    <select id="config_video_select" aria-label="Video a calibrer" title="Video a calibrer"></select>
+                    <select id="config_pool_select" aria-label="Image piscine de reference" title="Image piscine de reference"></select>
+                    <button id="config_refresh" type="button">Actualiser</button>
+                    <button id="config_save" type="button">Enregistrer JSON</button>
+                    <button id="config_flash_add" type="button" hidden>Add flash</button>
+                    <button id="config_flash_save" type="button">Enregistrer flash</button>
+                </div>
+                <p id="config_status" class="video-config-status"></p>
+                <div class="video-config-layout">
+                    <div id="config_warp_workspace"></div>
+                    <div class="video-config-preview">
+                        <canvas id="config_warp_result"></canvas>
+                        <pre id="config_json_preview"></pre>
+                    </div>
+                </div>
+                <div id="config_flash_panel" class="flash-config-panel">
+                    <label>Flash</label>
+                    <div id="config_flash_workspace"></div>
+                </div>
+            </section>
+        </div>
+    <div id="metadata_view" class="container workspace-view" role="tabpanel" aria-labelledby="workspace-tab-metadata" hidden>
+        <section id="metadata_panel" class="metadata-panel">
+            <div class="metadata-actions">
+                <button id="metadata_add_field" type="button">Ajouter champ</button>
+                <button id="metadata_add_swimmer" type="button">Ajouter nageur</button>
+                <button id="metadata_apply_json" type="button">Appliquer JSON</button>
+                <button id="metadata_save" type="button">Enregistrer JSON</button>
+            </div>
+            <p id="metadata_status" class="metadata-status"></p>
+            <div class="metadata-layout">
+                <div>
+                    <h3>Race</h3>
+                    <table class="metadata-table">
+                        <thead>
+                            <tr>
+                                <th>Champ</th>
+                                <th>Valeur JSON</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="metadata_race_fields"></tbody>
+                    </table>
+                    <h3>Nageurs</h3>
+                    <div class="metadata-swimmer-tools">
+                        <div class="metadata-swimmer-search">
+                            <label for="metadata_swimmer_search_input">Rechercher le nageur</label>
+                            <input type="search" id="metadata_swimmer_search_input" placeholder="Tapez pour rechercher..." autocomplete="off">
+                            <select id="metadata_swimmer_search_select" size="5" aria-label="Resultats recherche nageur"></select>
+                        </div>
+                        <div class="metadata-swimmer-assign">
+                            <label for="metadata_swimmer_lane_select">Ligne</label>
+                            <select id="metadata_swimmer_lane_select" aria-label="Ligne a modifier"></select>
+                            <button id="metadata_assign_swimmer" type="button">Ajouter a la ligne</button>
+                        </div>
+                    </div>
+                    <table class="metadata-table">
+                        <thead>
+                            <tr>
+                                <th>Ligne</th>
+                                <th>Nageur</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="metadata_swimmers"></tbody>
+                    </table>
+                </div>
+                <div class="metadata-json-column">
+                    <h3>JSON</h3>
+                    <textarea id="metadata_json_editor" spellcheck="false"></textarea>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="synchronize_view" class="container workspace-view" role="tabpanel" aria-labelledby="workspace-tab-synchronize" hidden>
+        <section id="synchronize_panel" class="synchronize-panel">
+            <div class="synchronize-actions">
+                <button id="sync_use_current" type="button">Set flash time</button>
+                <button id="sync_save" type="button">Enregistrer JSON</button>
+            </div>
+            <p id="sync_status" class="synchronize-status"></p>
+            <div class="synchronize-layout">
+                <div class="synchronize-section">
+                    <h3>Race start</h3>
+                    <div class="synchronize-fields">
+                        <label for="sync_current_video">Video</label>
+                        <input id="sync_current_video" type="text" readonly>
+                        <label for="sync_current_time">Current time</label>
+                        <input id="sync_current_time" type="text" readonly>
+                        <label for="sync_flash_field">Metadata field</label>
+                        <input id="sync_flash_field" type="text" readonly>
+                        <label for="sync_flash_time">Flash time</label>
+                        <input id="sync_flash_time" type="number" step="0.001" min="0">
+                        <label for="sync_flash_moment">Moment</label>
+                        <input id="sync_flash_moment" type="text" readonly>
+                        <label for="sync_flash_region">Pool region</label>
+                        <input id="sync_flash_region" type="text" readonly>
+                        <div id="sync_flash_pool" class="sync-flash-pool" aria-label="Flash region on swimming pool"></div>
+                    </div>
+                </div>
+                <div class="synchronize-section">
+                    <h3>Videos</h3>
+                    <div id="sync_video_list" class="sync-video-list"></div>
+                    <div class="sync-video-pair">
+                        <label for="sync_reference_video">Reference</label>
+                        <select id="sync_reference_video"></select>
+                        <label for="sync_target_video">Target</label>
+                        <select id="sync_target_video"></select>
+                        <button id="sync_video_sync" type="button" disabled>Sync videos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Bootstrap include -->
+
+
+</body>
+
+</html>

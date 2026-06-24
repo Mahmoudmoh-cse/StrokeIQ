@@ -1,0 +1,83 @@
+{
+  "city": "sportsdata",
+  "cup": "sportsdata",
+  "distance": "100",
+  "epreuve": "demifinale",
+  "lignes": {
+    "ligne1": "Swimmer 1"
+  },
+  "nage": "translation",
+  "name": "2026_sportsdata_translation_carre_100_demifinale",
+  "ncamera": 1,
+  "one_is_up": "False",
+  "sexe": "carre",
+  "start_side": "left",
+  "taille_piscine": [
+    50.0,
+    20.0
+  ],
+  "csvFiles": [
+    "2026_sportsdata_translation_carre_100_demifinale.csv"
+  ],
+  "sourceSportsdata": {
+    "format": "basic_tracking",
+    "csv": "sportsdata_basic_tracking.csv",
+    "columns": [
+      "frameId",
+      "swimmerId",
+      "eventId",
+      "time",
+      "distance"
+    ],
+    "lane": "ligne1"
+  },
+  "videos": [
+    {
+      "destPts": [
+        [
+          0,
+          20.0
+        ],
+        [
+          50.0,
+          20.0
+        ],
+        [
+          50.0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 30,
+      "height": 720,
+      "name": "2026_sportsdata_translation_carre_100_demifinale.mp4",
+      "one_is_up": "False",
+      "srcPts": [
+        [
+          128.0,
+          532.8
+        ],
+        [
+          1152.0,
+          532.8
+        ],
+        [
+          1152.0,
+          172.79999999999998
+        ],
+        [
+          128.0,
+          172.79999999999998
+        ]
+      ],
+      "start_flash": 0,
+      "start_moment": 0,
+      "start_side": "left",
+      "width": 1280
+    }
+  ],
+  "year": "2026"
+}

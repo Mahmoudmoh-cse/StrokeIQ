@@ -1,0 +1,60 @@
+{
+  "2025_courses_demo": {
+    "2025_courses_demo_translation_carre_100_demifinale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2025_courses_demo_translation_carre_100_finale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2025_courses_demo_translation_carre_50_finale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2025_courses_demo_translation_carre_50_serie": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2025_courses_demo_freestyle_femmes_50_finale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    }
+  },
+  "2026_sportsdata": {
+    "2026_sportsdata_butterfly_hommes_50_finaleA": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2026_sportsdata_translation_carre_100_demifinale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    },
+    "2026_sportsdata_translation_carre_100_finale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    }
+  },
+  "2026_my_competition": {
+    "2026_my_competition_freestyle_hommes_50_finale": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    }
+  },
+  "2026_test_50m_freestyle": {
+    "2026_test_50m_freestyle": {
+      "espadon": false,
+      "espadonModifie": false,
+      "data_checked": false
+    }
+  }
+}

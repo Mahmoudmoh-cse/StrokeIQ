@@ -1,0 +1,34 @@
+{
+  "id": "swimming.strokes",
+  "title": "Swimming strokes",
+  "values": [
+    {
+      "id": "freestyle",
+      "label": "Freestyle"
+    },
+    {
+      "id": "translation",
+      "label": "Translation"
+    },
+    {
+      "id": "dos",
+      "label": "Backstroke"
+    },
+    {
+      "id": "backstroke",
+      "label": "Backstroke"
+    },
+    {
+      "id": "breaststroke",
+      "label": "Breaststroke"
+    },
+    {
+      "id": "butterfly",
+      "label": "Butterfly"
+    },
+    {
+      "id": "medley",
+      "label": "Individual medley"
+    }
+  ]
+}

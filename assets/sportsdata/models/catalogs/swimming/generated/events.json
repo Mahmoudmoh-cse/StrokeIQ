@@ -1,0 +1,3247 @@
+{
+  "id": "swimming.events.generated",
+  "title": "Swimming event combinations",
+  "generatedFrom": "models/derivations/swimming/events.recipe.json",
+  "values": [
+    {
+      "id": "freestyle_hommes_50_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_hommes_100_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_hommes_200_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_hommes_400_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_hommes_800_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_hommes_1500_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Freestyle Men Heats"
+    },
+    {
+      "id": "freestyle_hommes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Freestyle Men Semifinal"
+    },
+    {
+      "id": "freestyle_hommes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Freestyle Men Final A"
+    },
+    {
+      "id": "freestyle_hommes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Freestyle Men Final B"
+    },
+    {
+      "id": "freestyle_femmes_50_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_femmes_100_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_femmes_200_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_femmes_400_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_femmes_800_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_femmes_1500_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Freestyle Women Heats"
+    },
+    {
+      "id": "freestyle_femmes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Freestyle Women Semifinal"
+    },
+    {
+      "id": "freestyle_femmes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Freestyle Women Final A"
+    },
+    {
+      "id": "freestyle_femmes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Freestyle Women Final B"
+    },
+    {
+      "id": "freestyle_mixte_50_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_50_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_50_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_50_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "freestyle_mixte_100_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_100_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_100_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_100_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "freestyle_mixte_200_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_200_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_200_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_200_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "freestyle_mixte_400_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_400_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_400_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_400_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "freestyle_mixte_800_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_800_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_800_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_800_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "freestyle_mixte_1500_series",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Freestyle Mixed Heats"
+    },
+    {
+      "id": "freestyle_mixte_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Freestyle Mixed Semifinal"
+    },
+    {
+      "id": "freestyle_mixte_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Freestyle Mixed Final A"
+    },
+    {
+      "id": "freestyle_mixte_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "freestyle",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Freestyle Mixed Final B"
+    },
+    {
+      "id": "backstroke_hommes_50_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_hommes_100_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_hommes_200_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_hommes_400_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_hommes_800_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_hommes_1500_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Backstroke Men Heats"
+    },
+    {
+      "id": "backstroke_hommes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Backstroke Men Semifinal"
+    },
+    {
+      "id": "backstroke_hommes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Backstroke Men Final A"
+    },
+    {
+      "id": "backstroke_hommes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Backstroke Men Final B"
+    },
+    {
+      "id": "backstroke_femmes_50_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_femmes_100_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_femmes_200_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_femmes_400_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_femmes_800_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_femmes_1500_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Backstroke Women Heats"
+    },
+    {
+      "id": "backstroke_femmes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Backstroke Women Semifinal"
+    },
+    {
+      "id": "backstroke_femmes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Backstroke Women Final A"
+    },
+    {
+      "id": "backstroke_femmes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Backstroke Women Final B"
+    },
+    {
+      "id": "backstroke_mixte_50_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_50_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_50_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_50_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "backstroke_mixte_100_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_100_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_100_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_100_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "backstroke_mixte_200_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_200_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_200_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_200_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "backstroke_mixte_400_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_400_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_400_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_400_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "backstroke_mixte_800_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_800_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_800_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_800_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "backstroke_mixte_1500_series",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Backstroke Mixed Heats"
+    },
+    {
+      "id": "backstroke_mixte_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Backstroke Mixed Semifinal"
+    },
+    {
+      "id": "backstroke_mixte_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Backstroke Mixed Final A"
+    },
+    {
+      "id": "backstroke_mixte_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "backstroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Backstroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_hommes_50_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_hommes_100_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_hommes_200_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_hommes_400_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_hommes_800_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_hommes_1500_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Breaststroke Men Heats"
+    },
+    {
+      "id": "breaststroke_hommes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Breaststroke Men Semifinal"
+    },
+    {
+      "id": "breaststroke_hommes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Breaststroke Men Final A"
+    },
+    {
+      "id": "breaststroke_hommes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Breaststroke Men Final B"
+    },
+    {
+      "id": "breaststroke_femmes_50_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_femmes_100_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_femmes_200_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_femmes_400_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_femmes_800_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_femmes_1500_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Breaststroke Women Heats"
+    },
+    {
+      "id": "breaststroke_femmes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Breaststroke Women Semifinal"
+    },
+    {
+      "id": "breaststroke_femmes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Breaststroke Women Final A"
+    },
+    {
+      "id": "breaststroke_femmes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Breaststroke Women Final B"
+    },
+    {
+      "id": "breaststroke_mixte_50_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_50_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_50_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_50_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_mixte_100_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_100_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_100_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_100_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_mixte_200_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_200_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_200_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_200_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_mixte_400_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_400_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_400_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_400_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_mixte_800_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_800_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_800_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_800_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "breaststroke_mixte_1500_series",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Breaststroke Mixed Heats"
+    },
+    {
+      "id": "breaststroke_mixte_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Breaststroke Mixed Semifinal"
+    },
+    {
+      "id": "breaststroke_mixte_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Breaststroke Mixed Final A"
+    },
+    {
+      "id": "breaststroke_mixte_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "breaststroke",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Breaststroke Mixed Final B"
+    },
+    {
+      "id": "butterfly_hommes_50_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_hommes_100_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_hommes_200_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_hommes_400_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_hommes_800_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_hommes_1500_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Butterfly Men Heats"
+    },
+    {
+      "id": "butterfly_hommes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Butterfly Men Semifinal"
+    },
+    {
+      "id": "butterfly_hommes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Butterfly Men Final A"
+    },
+    {
+      "id": "butterfly_hommes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Butterfly Men Final B"
+    },
+    {
+      "id": "butterfly_femmes_50_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_femmes_100_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_femmes_200_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_femmes_400_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_femmes_800_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_femmes_1500_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Butterfly Women Heats"
+    },
+    {
+      "id": "butterfly_femmes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Butterfly Women Semifinal"
+    },
+    {
+      "id": "butterfly_femmes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Butterfly Women Final A"
+    },
+    {
+      "id": "butterfly_femmes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Butterfly Women Final B"
+    },
+    {
+      "id": "butterfly_mixte_50_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_50_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_50_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_50_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "butterfly_mixte_100_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_100_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_100_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_100_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "butterfly_mixte_200_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_200_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_200_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_200_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "butterfly_mixte_400_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_400_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_400_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_400_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "butterfly_mixte_800_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_800_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_800_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_800_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "butterfly_mixte_1500_series",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Butterfly Mixed Heats"
+    },
+    {
+      "id": "butterfly_mixte_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Butterfly Mixed Semifinal"
+    },
+    {
+      "id": "butterfly_mixte_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Butterfly Mixed Final A"
+    },
+    {
+      "id": "butterfly_mixte_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "butterfly",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Butterfly Mixed Final B"
+    },
+    {
+      "id": "medley_hommes_50_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_hommes_100_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_hommes_200_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_hommes_400_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_hommes_800_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_hommes_1500_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Individual medley Men Heats"
+    },
+    {
+      "id": "medley_hommes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Individual medley Men Semifinal"
+    },
+    {
+      "id": "medley_hommes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Individual medley Men Final A"
+    },
+    {
+      "id": "medley_hommes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "hommes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Individual medley Men Final B"
+    },
+    {
+      "id": "medley_femmes_50_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_50_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_50_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_50_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_femmes_100_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_100_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_100_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_100_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_femmes_200_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_200_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_200_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_200_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_femmes_400_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_400_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_400_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_400_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_femmes_800_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_800_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_800_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_800_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_femmes_1500_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Individual medley Women Heats"
+    },
+    {
+      "id": "medley_femmes_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Individual medley Women Semifinal"
+    },
+    {
+      "id": "medley_femmes_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Individual medley Women Final A"
+    },
+    {
+      "id": "medley_femmes_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "femmes",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Individual medley Women Final B"
+    },
+    {
+      "id": "medley_mixte_50_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "series",
+      "label": "50 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_50_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "semifinale",
+      "label": "50 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_50_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleA",
+      "label": "50 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_50_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "50",
+      "round": "finaleB",
+      "label": "50 m Individual medley Mixed Final B"
+    },
+    {
+      "id": "medley_mixte_100_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "series",
+      "label": "100 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_100_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "semifinale",
+      "label": "100 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_100_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleA",
+      "label": "100 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_100_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "100",
+      "round": "finaleB",
+      "label": "100 m Individual medley Mixed Final B"
+    },
+    {
+      "id": "medley_mixte_200_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "series",
+      "label": "200 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_200_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "semifinale",
+      "label": "200 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_200_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleA",
+      "label": "200 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_200_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "200",
+      "round": "finaleB",
+      "label": "200 m Individual medley Mixed Final B"
+    },
+    {
+      "id": "medley_mixte_400_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "series",
+      "label": "400 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_400_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "semifinale",
+      "label": "400 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_400_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleA",
+      "label": "400 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_400_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "400",
+      "round": "finaleB",
+      "label": "400 m Individual medley Mixed Final B"
+    },
+    {
+      "id": "medley_mixte_800_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "series",
+      "label": "800 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_800_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "semifinale",
+      "label": "800 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_800_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleA",
+      "label": "800 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_800_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "800",
+      "round": "finaleB",
+      "label": "800 m Individual medley Mixed Final B"
+    },
+    {
+      "id": "medley_mixte_1500_series",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "series",
+      "label": "1500 m Individual medley Mixed Heats"
+    },
+    {
+      "id": "medley_mixte_1500_semifinale",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "semifinale",
+      "label": "1500 m Individual medley Mixed Semifinal"
+    },
+    {
+      "id": "medley_mixte_1500_finaleA",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleA",
+      "label": "1500 m Individual medley Mixed Final A"
+    },
+    {
+      "id": "medley_mixte_1500_finaleB",
+      "sport": "swimming",
+      "stroke": "medley",
+      "sex": "mixte",
+      "distance": "1500",
+      "round": "finaleB",
+      "label": "1500 m Individual medley Mixed Final B"
+    }
+  ]
+}

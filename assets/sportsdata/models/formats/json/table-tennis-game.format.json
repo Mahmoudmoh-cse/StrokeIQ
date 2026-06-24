@@ -1,0 +1,4 @@
+{
+    "id": "formats.json.table-tennis-game",
+    "schema": "models/schemas/table-tennis/game.schema.json"
+}

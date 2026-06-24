@@ -1,0 +1,14 @@
+{
+  "id": "rules.table-tennis.clip-sequence",
+  "title": "Table tennis clip sequence",
+  "checks": [
+    {
+      "id": "clip-name-pattern",
+      "description": "Clip names must match the set-point clip pattern."
+    },
+    {
+      "id": "contiguous-point-indexes",
+      "description": "Point indexes extracted from clip names must be contiguous from zero inside each manifest item."
+    }
+  ]
+}

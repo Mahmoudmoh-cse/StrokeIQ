@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "models/schemas/common/annotation-simple.schema.json",
+  "title": "Annotation simple",
+  "type": "object",
+  "required": [
+    "sport",
+    "fieldPresetId",
+    "referenceCorner",
+    "fps",
+    "startMoment",
+    "startSide",
+    "entities",
+    "events",
+    "perspective",
+    "annotations"
+  ],
+  "properties": {
+    "sport": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fieldPresetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "referenceCorner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fps": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "startMoment": {
+      "type": "number",
+      "minimum": 0
+    },
+    "startSide": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "perspective": {
+      "type": "object"
+    },
+    "annotations": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

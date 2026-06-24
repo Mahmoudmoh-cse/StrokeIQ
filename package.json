@@ -1,0 +1,43 @@
+{
+  "name": "config",
+  "version": "1.2",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@playwright/test": "^1.53.2",
+    "@vitest/coverage-v8": "^2.1.9",
+    "@vitest/ui": "^2.1.9",
+    "d3": "^7.9.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0",
+    "http-server": "^14.1.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^26.1.0",
+    "numeric": "^1.2.6",
+    "sinon": "^20.0.0",
+    "vitest": "^2.1.9"
+  },
+  "scripts": {
+    "test": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js",
+    "test:ui": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js --ui",
+    "test:coverage": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js --coverage",
+    "test:unit": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js workflow/test/unit",
+    "test:integration": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js workflow/test/integration",
+    "test:watch": "node node_modules/vitest/vitest.mjs --config workflow/test/vitest.config.js --watch",
+    "test:e2e": "node node_modules/playwright/cli.js test --config workflow/test/playwright.config.js",
+    "test:all": "npm run test && npm run test:e2e",
+    "dev": "http-server . -a 127.0.0.1 -p 8001 -c-1 --cors",
+    "serve": "http-server . -a 127.0.0.1 -p 8001 -c-1 --cors",
+    "lint": "eslint  --config workflow/linter/eslint.config.mjs",
+    "start": "http-server . -a 127.0.0.1 -p 8001 -c-1 --cors"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "imgctrlpts": "github:centralelyon/ImgCtrlPts",
+    "node-fetch": "^3.3.2",
+    "perspective-transform": "^1.1.3"
+  }
+}

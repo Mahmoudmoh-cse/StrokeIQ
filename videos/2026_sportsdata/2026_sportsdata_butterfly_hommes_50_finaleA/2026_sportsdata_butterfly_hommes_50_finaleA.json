@@ -1,0 +1,178 @@
+{
+  "city": "sportsdata",
+  "cup": "sportsdata",
+  "distance": "50",
+  "epreuve": "finaleA",
+  "lignes": {
+    "ligne4": "Sportsdata Butterfly"
+  },
+  "nage": "butterfly",
+  "name": "2026_sportsdata_butterfly_hommes_50_finaleA",
+  "one_is_up": false,
+  "sexe": "hommes",
+  "start_side": "left",
+  "taille_piscine": [
+    50.0,
+    20.0
+  ],
+  "csvFiles": [
+    "2026_sportsdata_butterfly_hommes_50_finaleA.csv"
+  ],
+  "cameras": {
+    "fixeGauche": {
+      "fov": 47,
+      "aspect": 1.777778,
+      "near": 0.01,
+      "far": 1000,
+      "position": [
+        9.86,
+        14.4,
+        -21.6
+      ],
+      "target": [
+        16.82,
+        0.0,
+        9.6
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "roll": 0
+    },
+    "fixeDroite": {
+      "fov": 47,
+      "aspect": 1.777778,
+      "near": 0.01,
+      "far": 1000,
+      "position": [
+        40.14,
+        14.4,
+        -21.6
+      ],
+      "target": [
+        33.18,
+        0.0,
+        9.6
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "roll": 0
+    }
+  },
+  "cameraFile": "sportsdata_basic_tracking_camera.json",
+  "sourceSportsdata": {
+    "format": "basic_tracking",
+    "csv": "sportsdata_basic_tracking.csv",
+    "columns": [
+      "frameId",
+      "swimmerId",
+      "eventId",
+      "time",
+      "distance"
+    ],
+    "lane": "ligne4"
+  },
+  "ncamera": 2,
+  "videos": [
+    {
+      "destPts": [
+        [
+          0.0,
+          361.0
+        ],
+        [
+          522.0,
+          361.0
+        ],
+        [
+          522.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "fps": 30,
+      "height": 720,
+      "name": "2026_sportsdata_butterfly_hommes_50_finaleA_fixeGauche.mp4",
+      "one_is_up": false,
+      "srcPts": [
+        [
+          1017.453,
+          306.155
+        ],
+        [
+          469.507,
+          266.844
+        ],
+        [
+          240.043,
+          438.948
+        ],
+        [
+          1151.739,
+          551.189
+        ]
+      ],
+      "start_moment": 0,
+      "start_side": "left",
+      "type_video": "fixeGauche",
+      "width": 1280,
+      "start_flash": 0
+    },
+    {
+      "destPts": [
+        [
+          378.0,
+          361.0
+        ],
+        [
+          900.0,
+          361.0
+        ],
+        [
+          900.0,
+          0.0
+        ],
+        [
+          378.0,
+          0.0
+        ]
+      ],
+      "fps": 30,
+      "height": 720,
+      "name": "2026_sportsdata_butterfly_hommes_50_finaleA_fixeDroite.mp4",
+      "one_is_up": false,
+      "srcPts": [
+        [
+          810.493,
+          266.844
+        ],
+        [
+          262.547,
+          306.155
+        ],
+        [
+          128.261,
+          551.189
+        ],
+        [
+          1039.957,
+          438.948
+        ]
+      ],
+      "start_moment": 0,
+      "start_side": "left",
+      "type_video": "fixeDroite",
+      "width": 1280,
+      "start_synchro_flash": 0
+    }
+  ],
+  "year": "2026"
+}

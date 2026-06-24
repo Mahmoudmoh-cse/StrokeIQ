@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "models/schemas/table-tennis/match-manifest.schema.json",
+  "title": "Table tennis match manifest",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "competition_name",
+      "competition_json_metadata",
+      "game_name",
+      "game_image",
+      "game_table_perspective",
+      "game_annotation",
+      "video_name",
+      "game_clips",
+      "game_clips_rapide",
+      "liste_annotations_rapides",
+      "liste_annotations"
+    ],
+    "properties": {
+      "competition_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "competition_json_metadata": {
+        "type": "string",
+        "pattern": "\\.json$"
+      },
+      "game_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "game_image": {
+        "type": "string",
+        "pattern": "\\.(jpg|jpeg|png)$"
+      },
+      "game_table_perspective": {
+        "type": "string",
+        "pattern": "\\.json$"
+      },
+      "game_annotation": {
+        "type": "string",
+        "pattern": "\\.csv$"
+      },
+      "video_name": {
+        "type": "string",
+        "pattern": "\\.(mp4|mov|mkv)$"
+      },
+      "camera": {
+        "$ref": "models/schemas/common/camera.schema.json"
+      },
+      "game_clips": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "game_clips_rapide": {
+        "type": "array"
+      },
+      "liste_annotations_rapides": {
+        "type": "array"
+      },
+      "liste_annotations": {
+        "type": "array"
+      }
+    },
+    "additionalProperties": true
+  }
+}

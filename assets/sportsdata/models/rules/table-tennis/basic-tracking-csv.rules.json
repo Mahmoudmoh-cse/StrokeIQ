@@ -1,0 +1,66 @@
+{
+  "id": "rules.table-tennis.basic-tracking-csv",
+  "title": "Table tennis basic tracking CSV",
+  "delimiter": ",",
+  "allowExtraColumns": false,
+  "columns": [
+    {
+      "name": "frameId",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "playerId",
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "eventId",
+      "type": "string",
+      "required": true,
+      "catalog": "table-tennis.annotation-events"
+    },
+    {
+      "name": "time",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "z",
+      "type": "number",
+      "required": true
+    }
+  ],
+  "groupBy": [
+    "playerId"
+  ],
+  "groupRules": [
+    {
+      "id": "frame-monotonic",
+      "check": "monotonic",
+      "column": "frameId",
+      "direction": "increasing",
+      "severity": "error"
+    },
+    {
+      "id": "time-monotonic",
+      "check": "monotonic",
+      "column": "time",
+      "direction": "increasing",
+      "severity": "error"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "formats.csv.swimming-basic-tracking",
+  "format": "csv",
+  "title": "Swimming basic tracking CSV",
+  "rules": "models/rules/swimming/basic-tracking-csv.rules.json"
+}

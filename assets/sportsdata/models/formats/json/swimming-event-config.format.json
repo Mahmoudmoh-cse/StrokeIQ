@@ -1,0 +1,8 @@
+{
+  "id": "formats.json.swimming-event-config",
+  "schema": "models/schemas/swimming/event-config.schema.json",
+  "semanticRules": [
+    "models/rules/swimming/event-composition.rules.json",
+    "models/rules/swimming/perspective.rules.json"
+  ]
+}

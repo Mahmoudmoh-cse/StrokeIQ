@@ -1,0 +1,7 @@
+{
+  "id": "swimming.distances.overrides",
+  "title": "Manual swimming distance overrides",
+  "sourceCatalog": "models/catalogs/swimming/distances.json",
+  "fixes": [],
+  "manualValues": []
+}

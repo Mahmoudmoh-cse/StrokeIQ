@@ -1,0 +1,14 @@
+{
+  "id": "rules.swimming.event-composition",
+  "title": "Swimming event composition",
+  "checks": [
+    {
+      "id": "catalog-membership",
+      "description": "distance, nage, sexe, and epreuve must belong to their catalogs."
+    },
+    {
+      "id": "generated-event",
+      "description": "The tuple nage + sexe + distance + epreuve must exist in the derived swimming events catalog."
+    }
+  ]
+}

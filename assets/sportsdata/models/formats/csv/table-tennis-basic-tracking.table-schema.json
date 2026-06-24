@@ -1,0 +1,6 @@
+{
+  "id": "formats.csv.table-tennis-basic-tracking",
+  "format": "csv",
+  "title": "Table tennis basic tracking CSV",
+  "rules": "models/rules/table-tennis/basic-tracking-csv.rules.json"
+}

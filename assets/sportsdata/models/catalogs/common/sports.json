@@ -1,0 +1,14 @@
+{
+  "id": "common.sports",
+  "title": "Sports",
+  "values": [
+    {
+      "id": "swimming",
+      "label": "Swimming"
+    },
+    {
+      "id": "table-tennis",
+      "label": "Table tennis"
+    }
+  ]
+}

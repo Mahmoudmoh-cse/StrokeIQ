@@ -1,0 +1,42 @@
+{
+  "id": "swimming.annotation-events",
+  "title": "Swimming annotation events",
+  "values": [
+    {
+      "id": "reaction",
+      "label": "Reaction"
+    },
+    {
+      "id": "dive",
+      "label": "Dive"
+    },
+    {
+      "id": "enter",
+      "label": "Water entry"
+    },
+    {
+      "id": "end",
+      "label": "End"
+    },
+    {
+      "id": "cycle",
+      "label": "Cycle"
+    },
+    {
+      "id": "section",
+      "label": "Section"
+    },
+    {
+      "id": "turn",
+      "label": "Turn"
+    },
+    {
+      "id": "finish",
+      "label": "Finish"
+    },
+    {
+      "id": "respi",
+      "label": "Breathing"
+    }
+  ]
+}

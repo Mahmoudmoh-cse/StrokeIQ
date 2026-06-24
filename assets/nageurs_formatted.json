@@ -1,0 +1,162 @@
+[
+  {
+    "nom": "Triangle SAUMON",
+    "sexe": "f"
+  },
+  {
+    "nom": "Cercle TRUITE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Carré CARPE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Losange SOLE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Hexagone DAURADE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Pentagone THON",
+    "sexe": "f"
+  },
+  {
+    "nom": "Rectangle SARDINE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Ellipse MAQUEREAU",
+    "sexe": "f"
+  },
+  {
+    "nom": "Octogone ANCHOIS",
+    "sexe": "f"
+  },
+  {
+    "nom": "Prisme COLIN",
+    "sexe": "f"
+  },
+  {
+    "nom": "Cylindre ROUGET",
+    "sexe": "f"
+  },
+  {
+    "nom": "Sphère BARBUE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Cône LIMANDE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Tore PLIE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Tétraèdre LOTTE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Dodécaèdre JULIENNE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Icosaèdre LIEU",
+    "sexe": "f"
+  },
+  {
+    "nom": "Parallélépipède ÉGLEFIN",
+    "sexe": "f"
+  },
+  {
+    "nom": "Trapèze AIGLEFIN",
+    "sexe": "f"
+  },
+  {
+    "nom": "Rhombe ROUSSETTE",
+    "sexe": "f"
+  },
+  {
+    "nom": "Cube BROCHET",
+    "sexe": "m"
+  },
+  {
+    "nom": "Pyramide PERCHE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Parallélogramme SANDRE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Pentagone ESPADON",
+    "sexe": "m"
+  },
+  {
+    "nom": "Hexaèdre REQUIN",
+    "sexe": "m"
+  },
+  {
+    "nom": "Octaèdre RAIE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Dodécagone TURBOT",
+    "sexe": "m"
+  },
+  {
+    "nom": "Icosaèdre CABILLAUD",
+    "sexe": "m"
+  },
+  {
+    "nom": "Prisme MERLAN",
+    "sexe": "m"
+  },
+  {
+    "nom": "Cylindre HARENG",
+    "sexe": "m"
+  },
+  {
+    "nom": "Ellipsoïde FLÉTAN",
+    "sexe": "m"
+  },
+  {
+    "nom": "Paraboloïde LINGUE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Hyperboloïde TACAUD",
+    "sexe": "m"
+  },
+  {
+    "nom": "Tronc GRONDIN",
+    "sexe": "m"
+  },
+  {
+    "nom": "Losange PAGEOT",
+    "sexe": "m"
+  },
+  {
+    "nom": "Triangle DORADE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Rectangle LOUP",
+    "sexe": "m"
+  },
+  {
+    "nom": "Cercle RASCASSE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Carré CONGRE",
+    "sexe": "m"
+  },
+  {
+    "nom": "Ellipse MURÈNE",
+    "sexe": "m"
+  }
+]

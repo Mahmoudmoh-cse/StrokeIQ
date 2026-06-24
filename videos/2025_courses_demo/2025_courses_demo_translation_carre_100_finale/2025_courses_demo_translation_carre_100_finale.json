@@ -1,0 +1,113 @@
+{
+    "city": "SyntheticPool",
+    "cup": "DEMO",
+    "distance": "100",
+    "epreuve": "finale",
+    "flash": {
+        "pts": [
+            [
+                507,
+                252
+            ],
+            [
+                487,
+                252
+            ],
+            [
+                487,
+                276
+            ],
+            [
+                507,
+                276
+            ]
+        ],
+        "side": "right"
+    },
+    "lignes": {
+        "ligne1": "Lane 1",
+        "ligne2": "Lane 2",
+        "ligne3": "Lane 3",
+        "ligne4": "Lane 4",
+        "ligne5": "Lane 5",
+        "ligne6": "Lane 6",
+        "ligne7": "Lane 7",
+        "ligne8": "Lane 8",
+        "ligne9": "Lane 9",
+        "ligne10": "Lane 10"
+    },
+    "nage": "freestyle",
+    "name": "nageurs_10_lignes_100m",
+    "ncamera": 1,
+    "one_is_up": false,
+    "sexe": "hommes",
+    "start_side": "left",
+    "taille_piscine": [
+        50,
+        25
+    ],
+    "aliases": [
+        "2025_courses_demo_translation_carre_100_finale_10_lanes"
+    ],
+    "temps": {
+        "lane1": "0:54.00",
+        "lane2": "0:54.00",
+        "lane3": "0:54.00",
+        "lane4": "0:54.00",
+        "lane5": "0:54.00",
+        "lane6": "0:54.00",
+        "lane7": "0:54.00",
+        "lane8": "0:54.00",
+        "lane9": "0:54.00",
+        "lane10": "0:54.00"
+    },
+    "videos": [
+        {
+            "destPts": [
+                [
+                    0,
+                    361
+                ],
+                [
+                    900,
+                    361
+                ],
+                [
+                    900,
+                    0
+                ],
+                [
+                    0,
+                    0
+                ]
+            ],
+            "fps": 25.0,
+            "height": 1080,
+            "name": "nageurs_10_lignes_100m.mp4",
+            "one_is_up": false,
+            "srcPts": [
+                [
+                    63,
+                    687
+                ],
+                [
+                    1900,
+                    746
+                ],
+                [
+                    1627,
+                    330
+                ],
+                [
+                    483,
+                    311
+                ]
+            ],
+            "start_flash": 0.1,
+            "start_moment": 0.1,
+            "start_side": "left",
+            "width": 1920
+        }
+    ],
+    "year": "2025"
+}

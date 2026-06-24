@@ -1,0 +1,10 @@
+{
+  "id": "rules.common.file-references",
+  "title": "File references",
+  "checks": [
+    {
+      "id": "extension-only",
+      "description": "Initial validators check declared file extensions only. File existence checks are intentionally separate because samples may reference media files outside this repository."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "formats.json.table-tennis-match-manifest",
+  "schema": "models/schemas/table-tennis/match-manifest.schema.json",
+  "semanticRules": [
+    "models/rules/table-tennis/clip-sequence.rules.json"
+  ]
+}

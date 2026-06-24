@@ -1,0 +1,10 @@
+{
+  "id": "formats.csv.annotation",
+  "format": "csv",
+  "title": "Generic annotation CSV",
+  "requiredColumns": [],
+  "notes": [
+    "This placeholder keeps CSV validators separate from JSON object schemas.",
+    "Sport-specific CSV columns should be added as sample annotation files are introduced."
+  ]
+}

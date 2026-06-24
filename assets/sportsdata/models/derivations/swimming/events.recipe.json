@@ -1,0 +1,39 @@
+{
+  "id": "swimming.events",
+  "title": "Swimming event combinations",
+  "output": "models/catalogs/swimming/generated/events.json",
+  "dimensions": [
+    {
+      "field": "stroke",
+      "scope": "swimming",
+      "catalog": "strokes"
+    },
+    {
+      "field": "sex",
+      "scope": "common",
+      "catalog": "sexes"
+    },
+    {
+      "field": "distance",
+      "scope": "swimming",
+      "catalog": "distances"
+    },
+    {
+      "field": "round",
+      "scope": "swimming",
+      "catalog": "rounds"
+    }
+  ],
+  "idTemplate": "{stroke}_{sex}_{distance}_{round}",
+  "labelTemplate": "{distance_label} {stroke_label} {sex_label} {round_label}",
+  "filters": [
+    {
+      "field": "sex",
+      "allow": [
+        "hommes",
+        "femmes",
+        "mixte"
+      ]
+    }
+  ]
+}

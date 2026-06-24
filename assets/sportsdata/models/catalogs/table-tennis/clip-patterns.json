@@ -1,0 +1,11 @@
+{
+  "id": "table-tennis.clip-patterns",
+  "title": "Table tennis clip patterns",
+  "values": [
+    {
+      "id": "set-point",
+      "label": "Set and point clip",
+      "pattern": "^set_[0-9]+_point_[0-9]+$"
+    }
+  ]
+}

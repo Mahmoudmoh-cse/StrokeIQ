@@ -1,0 +1,12 @@
+{
+  "id": "swimming.pool-presets",
+  "title": "Swimming pool presets",
+  "values": [
+    {
+      "id": "olympic_50x25",
+      "label": "Olympic 50 x 25 m",
+      "width": 50,
+      "height": 25
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "swimming.field-presets",
+  "title": "Swimming field presets",
+  "values": [
+    {
+      "id": "swimming_olympic",
+      "label": "Swimming Olympic pool",
+      "poolPresetId": "olympic_50x25"
+    }
+  ]
+}

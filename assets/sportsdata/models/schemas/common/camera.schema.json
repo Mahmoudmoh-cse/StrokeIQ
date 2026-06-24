@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "models/schemas/common/camera.schema.json",
+  "title": "Camera configuration",
+  "type": "object",
+  "required": [
+    "fov",
+    "aspect",
+    "near",
+    "far",
+    "position",
+    "target",
+    "up",
+    "roll"
+  ],
+  "properties": {
+    "fov": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "exclusiveMaximum": 180
+    },
+    "aspect": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "near": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "far": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "position": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "target": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "up": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "roll": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

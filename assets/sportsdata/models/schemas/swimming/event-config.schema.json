@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "models/schemas/swimming/event-config.schema.json",
+  "title": "Swimming event configuration",
+  "type": "object",
+  "required": [
+    "distance",
+    "epreuve",
+    "nage",
+    "sexe",
+    "name",
+    "city",
+    "cup",
+    "ncamera",
+    "one_is_up",
+    "start_side",
+    "taille_piscine",
+    "lignes",
+    "nageuses",
+    "videos",
+    "annotation_simple"
+  ],
+  "properties": {
+    "distance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epreuve": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sexe": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cup": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ncamera": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "camera": {
+      "$ref": "models/schemas/common/camera.schema.json"
+    },
+    "one_is_up": {
+      "type": [
+        "boolean",
+        "string"
+      ]
+    },
+    "start_side": {
+      "type": "string",
+      "minLength": 1
+    },
+    "taille_piscine": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "lignes": {
+      "type": "object"
+    },
+    "nageuses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "fps",
+          "start_moment",
+          "start_side",
+          "one_is_up",
+          "srcPts",
+          "destPts",
+          "width",
+          "height"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fps": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "start_moment": {
+            "type": "number",
+            "minimum": 0
+          },
+          "start_side": {
+            "type": "string",
+            "minLength": 1
+          },
+          "one_is_up": {
+            "type": [
+              "boolean",
+              "string"
+            ]
+          },
+          "srcPts": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "destPts": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "annotation_simple": {
+      "type": "object"
+    },
+    "tracking": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

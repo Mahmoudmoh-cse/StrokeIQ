@@ -1,0 +1,90 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "models/schemas/table-tennis/game.schema.json",
+    "title": "Table tennis game metadata",
+    "type": "object",
+    "required": [
+        "playerA",
+        "playerB",
+        "droitier_gaucher_joueurA",
+        "droitier_gaucher_joueurB",
+        "prise_joueurA",
+        "prise_joueurB",
+        "date",
+        "epreuve",
+        "fps"
+    ],
+    "properties": {
+        "lien_telechargement": {
+            "type": "string",
+            "format": "uri"
+        },
+        "playerA": {
+            "type": "string",
+            "minLength": 1
+        },
+        "playerB": {
+            "type": "string",
+            "minLength": 1
+        },
+        "droitier_gaucher_joueurA": {
+            "type": "string",
+            "enum": [
+                "droitier",
+                "gaucher"
+            ]
+        },
+        "droitier_gaucher_joueurB": {
+            "type": "string",
+            "enum": [
+                "droitier",
+                "gaucher"
+            ]
+        },
+        "prise_joueurA": {
+            "type": "string",
+            "minLength": 1
+        },
+        "prise_joueurB": {
+            "type": "string",
+            "minLength": 1
+        },
+        "point_vue": {
+            "type": "string",
+            "minLength": 1
+        },
+        "date": {
+            "type": "string",
+            "format": "date"
+        },
+        "epreuve": {
+            "type": "string",
+            "minLength": 1
+        },
+        "competition": {
+            "type": "string"
+        },
+        "niveau": {
+            "type": "string"
+        },
+        "nom_creation": {
+            "type": "string"
+        },
+        "date_creation": {
+            "type": "string",
+            "format": "date"
+        },
+        "version": {
+            "type": "string"
+        },
+        "fps": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "camera": {
+            "$ref": "models/schemas/common/camera.schema.json"
+        }
+    },
+    "additionalProperties": false
+}

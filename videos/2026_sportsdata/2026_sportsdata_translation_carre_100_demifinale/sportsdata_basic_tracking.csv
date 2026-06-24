@@ -1,0 +1,5 @@
+frameId,swimmerId,eventId,time,distance
+0,1,dive,0.00,0.00
+30,1,cycle,1.00,1.80
+60,1,cycle,2.00,3.70
+90,1,finish,3.00,5.60

@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "models/schemas/swimming/annotation-simple.schema.json",
+  "title": "Swimming annotation simple",
+  "type": "object",
+  "required": [
+    "sport",
+    "fieldPresetId",
+    "referenceCorner",
+    "fps",
+    "startMoment",
+    "startSide",
+    "entities",
+    "events",
+    "perspective",
+    "annotations"
+  ],
+  "properties": {
+    "sport": {
+      "type": "string",
+      "enum": [
+        "swimming"
+      ]
+    },
+    "fieldPresetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "referenceCorner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fps": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "startMoment": {
+      "type": "number",
+      "minimum": 0
+    },
+    "startSide": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "name",
+          "lane"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lane": {
+            "type": "string",
+            "minLength": 1
+          },
+          "swimmerId": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "perspective": {
+      "type": "object",
+      "required": [
+        "corners"
+      ],
+      "properties": {
+        "corners": {
+          "type": "object",
+          "required": [
+            "tl",
+            "tr",
+            "br",
+            "bl"
+          ],
+          "properties": {
+            "tl": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              }
+            },
+            "tr": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              }
+            },
+            "br": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              }
+            },
+            "bl": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

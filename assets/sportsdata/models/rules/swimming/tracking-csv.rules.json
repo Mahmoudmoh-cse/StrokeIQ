@@ -1,0 +1,207 @@
+{
+  "id": "rules.swimming.tracking-csv",
+  "title": "Swimming tracking CSV",
+  "delimiter": ",",
+  "allowExtraColumns": false,
+  "columns": [
+    {
+      "name": "frameId",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "swimmerId",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "swimmerName",
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    {
+      "name": "lane",
+      "type": "string",
+      "required": true,
+      "pattern": "^ligne[0-9]+$"
+    },
+    {
+      "name": "cumul",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "eventId",
+      "type": "string",
+      "required": true,
+      "catalog": "swimming.annotation-events"
+    },
+    {
+      "name": "eventX",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "eventY",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 25
+    },
+    {
+      "name": "event",
+      "type": "string",
+      "required": true,
+      "catalog": "swimming.annotation-events"
+    },
+    {
+      "name": "TempsVideo (s)",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "Temps (s)",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "distance (m)",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "tempo (s)",
+      "type": "number",
+      "required": false,
+      "nullable": true,
+      "exclusiveMin": 0,
+      "max": 5
+    },
+    {
+      "name": "frequence (cylce/min)",
+      "canonicalName": "frequency_cycle_per_min",
+      "type": "number",
+      "required": false,
+      "nullable": true,
+      "exclusiveMin": 0,
+      "max": 200
+    },
+    {
+      "name": "amplitude (m)",
+      "type": "number",
+      "required": false,
+      "nullable": true,
+      "exclusiveMin": 0,
+      "max": 25
+    },
+    {
+      "name": "vitesse (m/s)",
+      "type": "number",
+      "required": false,
+      "nullable": true,
+      "exclusiveMin": 0,
+      "max": 25
+    }
+  ],
+  "groupBy": [
+    "swimmerId"
+  ],
+  "rowRules": [
+    {
+      "id": "video-time-after-race-time",
+      "check": "comparison",
+      "left": "TempsVideo (s)",
+      "operator": ">=",
+      "right": "Temps (s)",
+      "severity": "error"
+    }
+  ],
+  "groupRules": [
+    {
+      "id": "frame-monotonic",
+      "check": "monotonic",
+      "column": "frameId",
+      "direction": "increasing",
+      "severity": "error"
+    },
+    {
+      "id": "video-time-monotonic",
+      "check": "monotonic",
+      "column": "TempsVideo (s)",
+      "direction": "increasing",
+      "severity": "error"
+    },
+    {
+      "id": "time-monotonic",
+      "check": "monotonic",
+      "column": "Temps (s)",
+      "direction": "increasing",
+      "severity": "error"
+    },
+    {
+      "id": "distance-monotonic",
+      "check": "monotonic",
+      "column": "distance (m)",
+      "direction": "nondecreasing",
+      "severity": "error"
+    },
+    {
+      "id": "tempo-derived-from-time",
+      "check": "deltaFormula",
+      "column": "tempo (s)",
+      "source": "Temps (s)",
+      "formula": "2 * delta",
+      "tolerance": 0.02,
+      "skipFirstRow": true,
+      "skipWhenEmpty": true,
+      "severity": "warning"
+    },
+    {
+      "id": "frequency-derived-from-tempo",
+      "check": "formula",
+      "column": "frequence (cylce/min)",
+      "formula": "60 / tempo",
+      "inputs": {
+        "tempo": "tempo (s)"
+      },
+      "tolerance": 0.05,
+      "skipWhenEmpty": true,
+      "severity": "warning"
+    },
+    {
+      "id": "amplitude-derived-from-distance",
+      "check": "deltaFormula",
+      "column": "amplitude (m)",
+      "source": "distance (m)",
+      "formula": "2 * delta",
+      "tolerance": 0.05,
+      "skipFirstRow": true,
+      "skipWhenEmpty": true,
+      "severity": "warning"
+    },
+    {
+      "id": "speed-derived-from-amplitude-tempo",
+      "check": "formula",
+      "column": "vitesse (m/s)",
+      "formula": "amplitude / tempo",
+      "inputs": {
+        "amplitude": "amplitude (m)",
+        "tempo": "tempo (s)"
+      },
+      "tolerance": 0.05,
+      "skipWhenEmpty": true,
+      "severity": "warning"
+    }
+  ]
+}

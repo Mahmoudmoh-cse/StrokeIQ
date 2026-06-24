@@ -1,0 +1,14 @@
+{
+  "id": "rules.swimming.perspective",
+  "title": "Swimming perspective",
+  "checks": [
+    {
+      "id": "four-corners",
+      "description": "Perspective data must provide tl, tr, br, and bl corners with numeric x/y coordinates."
+    },
+    {
+      "id": "entity-lanes",
+      "description": "Each annotation entity lane must exist in the root lignes object."
+    }
+  ]
+}

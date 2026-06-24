@@ -1,0 +1,38 @@
+{
+  "id": "common.media-types",
+  "title": "Media types",
+  "values": [
+    {
+      "id": "json",
+      "label": "JSON",
+      "extensions": [
+        ".json"
+      ]
+    },
+    {
+      "id": "csv",
+      "label": "CSV",
+      "extensions": [
+        ".csv"
+      ]
+    },
+    {
+      "id": "image",
+      "label": "Image",
+      "extensions": [
+        ".jpg",
+        ".jpeg",
+        ".png"
+      ]
+    },
+    {
+      "id": "video",
+      "label": "Video",
+      "extensions": [
+        ".mp4",
+        ".mov",
+        ".mkv"
+      ]
+    }
+  ]
+}

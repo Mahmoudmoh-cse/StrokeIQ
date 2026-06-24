@@ -1,0 +1,35 @@
+{
+  "distance": 50,
+  "style": "freestyle",
+  "lignes": {
+    "ligne1": "Nageur 1",
+    "ligne2": "Nageur 2", 
+    "ligne3": "Nageur 3",
+    "ligne4": "Nageur 4",
+    "ligne5": "Nageur 5",
+    "ligne6": "Nageur 6",
+    "ligne7": "Nageur 7",
+    "ligne8": "Nageur 8"
+  },
+  "videos": [
+    {
+      "name": "camera_fixe_droite",
+      "width": 1920,
+      "height": 1080,
+      "srcPts": [
+        [100, 200],
+        [1800, 180],
+        [1850, 900],
+        [50, 920]
+      ],
+      "destPts": [
+        [0, 0],
+        [50, 0],
+        [50, 20],
+        [0, 20]
+      ],
+      "start_side": "right",
+      "one_is_up": true
+    }
+  ]
+}

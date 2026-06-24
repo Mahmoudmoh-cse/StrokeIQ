@@ -1,0 +1,22 @@
+{
+  "id": "common.reference-corners",
+  "title": "Reference corners",
+  "values": [
+    {
+      "id": "tl",
+      "label": "Top left"
+    },
+    {
+      "id": "tr",
+      "label": "Top right"
+    },
+    {
+      "id": "br",
+      "label": "Bottom right"
+    },
+    {
+      "id": "bl",
+      "label": "Bottom left"
+    }
+  ]
+}

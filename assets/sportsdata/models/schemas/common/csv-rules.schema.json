@@ -1,0 +1,107 @@
+{
+  "id": "schemas.common.csv-rules",
+  "title": "CSV validation rules schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "columns"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "delimiter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowExtraColumns": {
+      "type": "boolean"
+    },
+    "columns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonicalName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "integer",
+              "number",
+              "string",
+              "boolean",
+              "date",
+              "timecode"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "nullable": {
+            "type": "boolean"
+          },
+          "min": {
+            "type": "number"
+          },
+          "max": {
+            "type": "number"
+          },
+          "exclusiveMin": {
+            "type": "number"
+          },
+          "exclusiveMax": {
+            "type": "number"
+          },
+          "minLength": {
+            "type": "integer"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "enum": {
+            "type": "array"
+          },
+          "catalog": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "groupBy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rowRules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "groupRules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

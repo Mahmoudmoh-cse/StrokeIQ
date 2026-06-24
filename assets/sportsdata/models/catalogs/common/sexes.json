@@ -1,0 +1,18 @@
+{
+  "id": "common.sexes",
+  "title": "Sexes",
+  "values": [
+    {
+      "id": "hommes",
+      "label": "Men"
+    },
+    {
+      "id": "femmes",
+      "label": "Women"
+    },
+    {
+      "id": "mixte",
+      "label": "Mixed"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "city": "My City",
+  "cup": "My Competition",
+  "distance": "50",
+  "distanceMode": "interpolated",
+  "epreuve": "finale",
+  "nage": "freestyle",
+  "name": "2026_my_competition_freestyle_hommes_50_finale",
+  "ncamera": 1,
+  "numberOfSwimmers": 1,
+  "one_is_up": "True",
+  "poolLengthM": 25,
+  "raceDistanceM": 50,
+  "raceStartVideoTime": 0,
+  "sexe": "hommes",
+  "start_side": "left",
+  "taille_piscine": [
+    25,
+    20
+  ],
+  "csvFiles": [
+    "2026_my_competition_freestyle_hommes_50_finale.csv"
+  ],
+  "year": "2026",
+  "strokeType": "freestyle",
+  "expectedTurns": 1,
+  "expectedTurnDistances": [
+    25
+  ],
+  "lignes": {
+    "ligne1": "Swimmer 1"
+  },
+  "swimmers": [
+    {
+      "swimmerId": 0,
+      "swimmerName": "Swimmer 1",
+      "lane": "ligne1"
+    }
+  ],
+  "videos": [
+    {
+      "destPts": [
+        [
+          0,
+          20
+        ],
+        [
+          25,
+          20
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 30,
+      "height": 1080,
+      "name": "2026_my_competition_freestyle_hommes_50_finale.mp4",
+      "one_is_up": "True",
+      "srcPts": [
+        [
+          150,
+          865
+        ],
+        [
+          1770,
+          865
+        ],
+        [
+          1770,
+          215
+        ],
+        [
+          150,
+          215
+        ]
+      ],
+      "start_flash": 0,
+      "start_moment": 0,
+      "start_side": "left",
+      "type_video": "fixeDroite",
+      "width": 1920,
+      "raceStartVideoTime": 0
+    }
+  ]
+}

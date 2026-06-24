@@ -1,0 +1,94 @@
+{
+  "city": "Demo",
+  "cup": "Demo",
+  "distance": "50",
+  "epreuve": "finale",
+  "lignes": {
+    "ligne1": "Camille Martin",
+    "ligne2": "Lea Dubois",
+    "ligne3": "Manon Bernard",
+    "ligne4": "Ines Moreau",
+    "ligne5": "Chloe Laurent",
+    "ligne6": "Sarah Petit",
+    "ligne7": "Emma Garnier",
+    "ligne8": "Julie Rousseau"
+  },
+  "nage": "freestyle",
+  "name": "2025_courses_demo_freestyle_femmes_50_finale",
+  "ncamera": 1,
+  "one_is_up": "True",
+  "sexe": "femmes",
+  "start_side": "left",
+  "taille_piscine": [
+    50.0,
+    20.0
+  ],
+  "csvFiles": [
+    "2025_courses_demo_freestyle_femmes_50_finale.csv"
+  ],
+  "sourceSportsdata": {
+    "format": "basic_tracking",
+    "csv": "sportsdata_basic_tracking.csv",
+    "columns": [
+      "frameId",
+      "swimmerId",
+      "eventId",
+      "time",
+      "distance"
+    ]
+  },
+  "sportsdataFormats": {
+    "basic": "sportsdata_basic_tracking.csv",
+    "tracking": "2025_courses_demo_freestyle_femmes_50_finale.csv"
+  },
+  "videos": [
+    {
+      "destPts": [
+        [
+          0,
+          20.0
+        ],
+        [
+          50.0,
+          20.0
+        ],
+        [
+          50.0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 50,
+      "height": 1080,
+      "name": "2025_courses_demo_freestyle_femmes_50_finale.mp4",
+      "one_is_up": "True",
+      "srcPts": [
+        [
+          150,
+          865
+        ],
+        [
+          1770,
+          865
+        ],
+        [
+          1770,
+          215
+        ],
+        [
+          150,
+          215
+        ]
+      ],
+      "start_flash": 0,
+      "start_moment": 0,
+      "start_side": "left",
+      "type_video": "fixeDroite",
+      "width": 1920
+    }
+  ],
+  "year": "2025"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "swimming.metadata.distance",
+  "sport": "swimming",
+  "field": "distance",
+  "jsonKey": "distance",
+  "label": "Distance",
+  "valueCatalog": {
+    "scope": "swimming",
+    "name": "distances",
+    "path": "models/catalogs/swimming/distances.json"
+  },
+  "overrideCatalog": "models/catalogs/swimming/distances.overrides.json",
+  "source": {
+    "repository": "centralelyon/sportsdata",
+    "url": "https://github.com/centralelyon/sportsdata",
+    "commit": "a62f0096d183f898e75441a843df0ced37faed7a",
+    "path": "models/catalogs/swimming/distances.json"
+  },
+  "manualValuesAllowed": true,
+  "jsonValueField": "id",
+  "ui": {
+    "jsonValueLabel": "Valeur JSON",
+    "jsonValueControl": "select"
+  }
+}

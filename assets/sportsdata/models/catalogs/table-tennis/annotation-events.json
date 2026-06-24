@@ -1,0 +1,26 @@
+{
+  "id": "table-tennis.annotation-events",
+  "title": "Table tennis annotation events",
+  "values": [
+    {
+      "id": "hit",
+      "label": "Hit"
+    },
+    {
+      "id": "arc",
+      "label": "Arc"
+    },
+    {
+      "id": "bounce",
+      "label": "Bounce"
+    },
+    {
+      "id": "net_cross",
+      "label": "Net cross"
+    },
+    {
+      "id": "receive",
+      "label": "Receive"
+    }
+  ]
+}

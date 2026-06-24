@@ -1,0 +1,5 @@
+frameId,swimmerId,swimmerName,lane,cumul,eventId,eventX,eventY,event,TempsVideo (s),Temps (s),distance (m),tempo (s),frequence (cylce/min),amplitude (m),vitesse (m/s)
+0,3,Sportsdata Butterfly,ligne4,0.00,dive,50.00,10.00,dive,0.00,0.00,0.00,,,,
+30,3,Sportsdata Butterfly,ligne4,1.80,cycle,48.20,10.00,cycle,1.00,1.00,1.80,2.00,30.00,3.60,1.80
+60,3,Sportsdata Butterfly,ligne4,3.70,cycle,46.30,10.00,cycle,2.00,2.00,3.70,2.00,30.00,3.80,1.90
+90,3,Sportsdata Butterfly,ligne4,5.60,finish,44.40,10.00,finish,3.00,3.00,5.60,2.00,30.00,3.80,1.90

@@ -1,0 +1,106 @@
+{
+  "city": "sportsdata",
+  "cup": "sportsdata",
+  "distance": "100",
+  "epreuve": "finale",
+  "lignes": {
+    "ligne1": "Swimmer 1"
+  },
+  "nage": "translation",
+  "name": "2026_sportsdata_translation_carre_100_finale",
+  "ncamera": 1,
+  "one_is_up": "False",
+  "sexe": "carre",
+  "start_side": "left",
+  "taille_piscine": [
+    50.0,
+    20.0
+  ],
+  "csvFiles": [
+    "2026_sportsdata_translation_carre_100_finale.csv"
+  ],
+  "camera": {
+    "fov": 55.0,
+    "aspect": 1.777778,
+    "near": 0.01,
+    "far": 1000.0,
+    "position": [
+      25.0,
+      17.0,
+      -25.0
+    ],
+    "target": [
+      25.0,
+      0.0,
+      10.0
+    ],
+    "up": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "roll": 0.0
+  },
+  "cameraFile": "sportsdata_basic_tracking_camera.json",
+  "sourceSportsdata": {
+    "format": "basic_tracking",
+    "csv": "sportsdata_basic_tracking.csv",
+    "columns": [
+      "frameId",
+      "swimmerId",
+      "eventId",
+      "time",
+      "distance"
+    ],
+    "lane": "ligne1"
+  },
+  "videos": [
+    {
+      "destPts": [
+        [
+          0,
+          361.0
+        ],
+        [
+          900.0,
+          361.0
+        ],
+        [
+          900.0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 30,
+      "height": 720,
+      "name": "2026_sportsdata_translation_carre_100_finale.mp4",
+      "one_is_up": "False",
+      "srcPts": [
+        [
+          1000.897,
+          296.929
+        ],
+        [
+          279.103,
+          296.929
+        ],
+        [
+          62.069,
+          461.0
+        ],
+        [
+          1217.931,
+          461.0
+        ]
+      ],
+      "start_flash": 0,
+      "start_moment": 0,
+      "start_side": "left",
+      "width": 1280
+    }
+  ],
+  "year": "2026"
+}
