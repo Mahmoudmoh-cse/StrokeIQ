@@ -306,13 +306,16 @@ export function clampSelectedSwim(laneCount) {
             left_attr = "start_flash"
         }
 
+        let right_val = Number(metaDroite[right_attr]) || 0;
+        let left_val = Number(metaGauche[left_attr]) || 0;
+
         if (currentVideoMatches("fixeDroite")) {
 
-            let t = vid.currentTime - metaDroite[right_attr] + metaGauche[left_attr]
+            let t = vid.currentTime - right_val + left_val
             vid.setAttribute("src", videoUrl(vidName, t))
             setGrad(t)
         } else {
-            let t = vid.currentTime - metaDroite[right_attr] + metaGauche[left_attr]
+            let t = vid.currentTime - right_val + left_val
             vid.setAttribute("src", videoUrl(vidName, t))
             setGrad(t)
         }
@@ -344,13 +347,17 @@ export function clampSelectedSwim(laneCount) {
                 right_attr = "start_synchro_flash"
                 left_attr = "start_flash"
             }
+
+            let right_val = Number(metaDroite[right_attr]) || 0;
+            let left_val = Number(metaGauche[left_attr]) || 0;
+
             if (currentVideoMatches("fixeDroite")) {
-                let t = vid.currentTime + metaDroite[right_attr] - metaGauche[left_attr]
+                let t = vid.currentTime + right_val - left_val
                 edit_vidName(metaGauche.name);
                 vid.setAttribute("src", videoUrl(metaGauche.name, t))
                 setGrad(t)
             } else {
-                let t = vid.currentTime - metaDroite[right_attr] + metaGauche[left_attr]
+                let t = vid.currentTime - right_val + left_val
                 edit_vidName(metaDroite.name);
                 vid.setAttribute("src", videoUrl(metaDroite.name, t))
                 setGrad(t)

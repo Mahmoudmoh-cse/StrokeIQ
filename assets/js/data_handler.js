@@ -170,7 +170,7 @@ export function getAvg(data) {
 export function add_element_to_data(element, id_swim) {
     curr_swims[id_swim].push(element)
     curr_swims[id_swim] = currate_events(curr_swims[id_swim])
-    if (last_added_data == []) {
+    if (last_added_data.length === 0) {
         last_added_data = new Array(nb_of_last_added_data_saved).fill(null);
     }
     for (let i = nb_of_last_added_data_saved - 1; i > 0; i--) {
