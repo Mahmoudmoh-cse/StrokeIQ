@@ -29,7 +29,8 @@ export let mode_color = {
     "respi_gauche": "rgba(189, 56, 56, 0.5)",
     "respi_droite": "rgba(189, 56, 56, 0.5)",
     "turn": "rgba(68, 68, 68, 0.5)",
-    "finish": "rgba(52, 52, 52, 0.5)"
+    "finish": "rgba(52, 52, 52, 0.5)",
+    "dolphin": "rgba(138, 43, 226, 0.5)"
 };
 
 /**

@@ -1359,3 +1359,130 @@ input:checked + .slider:before {
         grid-template-columns: 1fr;
     }
 }
+
+/* Advanced Analysis Dashboard */
+.advanced-dashboard {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.advanced-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.advanced-card h3 {
+    margin-top: 0;
+    color: #0b63ce;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.advanced-stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.stat-box {
+    background: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #0b63ce;
+}
+
+.advanced-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.advanced-table th, .advanced-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.advanced-table th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: 600;
+}
+
+.advanced-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.advanced-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.advanced-badge-warning {
+    background-color: #f39c12;
+}
+
+.advanced-empty {
+    font-style: italic;
+    color: #888;
+}
+
+.advanced-btn {
+    background-color: #0b63ce;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.advanced-btn:hover {
+    background-color: #084c9e;
+}
+
+.mode-dolphin-fade {
+    background-color: rgba(138, 43, 226, 0.7);
+    color: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

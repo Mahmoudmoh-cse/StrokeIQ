@@ -228,6 +228,7 @@ D3.js charts, and controls for swimmer performance analysis
                         <button class="modebtn mode-cycle-fade r_boutons active selected" name="cycle"
                             id="btn-cycle">Cycle</button>
                         <button class="modebtn mode-respi-fade" name="respi" id="btn-respi">Breath</button>
+                        <button class="modebtn mode-dolphin-fade" name="dolphin" id="btn-dolphin">Dolphin Kick</button>
                         <select class="u-half-width" id="video_size_select" aria-label="Video size"
                             title="Video size">
                             <option value="small" selected>small video</option>
@@ -378,6 +379,7 @@ D3.js charts, and controls for swimmer performance analysis
                     <button class="sideTabLinks" id="tab-verification-charts">📊</button>
                     <button class="sideTabLinks" id="tab-data-plot-tout">📋</button>
                     <button class="sideTabLinks" id="tab-modify-selected-annotation">🛠</button>
+                    <button class="sideTabLinks" id="tab-advanced-analysis">🔬</button>
                     <!-- <button class="sideTabLinks" id="tab-parameters">⚙️</button> -->
                 </div>
 
@@ -513,6 +515,15 @@ D3.js charts, and controls for swimmer performance analysis
                                 <input type="number" id="deplacementCorrection" value=5>
 
                     </div>
+                </div>
+
+                <!-- Tab Content Advanced Analysis-->
+                <div id="advanced_analysis" class="side_tab_content">
+                    <label>Advanced Analysis</label>
+                    <div id="advanced-analysis-container"></div>
+                    <button id="btn-advanced-analysis" class="advanced-btn">Run Analysis</button>
+                    <button id="btn-download-advanced" class="advanced-btn">Download Advanced CSV</button>
+                    <button id="btn-convert-dolphin" class="advanced-btn" style="background-color: #8a2be2;">Convert Underwater Cycles to Dolphin</button>
                 </div>
 
             </div>

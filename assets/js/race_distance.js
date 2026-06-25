@@ -96,7 +96,7 @@ export function validateAnnotationDistances(events, raceDistanceM, poolLengthM) 
     const chronological = (events || []).slice().sort((a, b) => Number(a.frameId) - Number(b.frameId));
     const normalizedEvents = chronological.map(event => ({ ...event, normalizedMode: normalizeEventMode(event.mode) }));
     const expectedTurnDistances = getExpectedTurnDistances(raceDistanceM, poolLengthM);
-    const knownModes = new Set(["reaction", "enter", "breakout", "cycle", "section", "turn", "finish", "breath"]);
+    const knownModes = new Set(["reaction", "enter", "breakout", "cycle", "section", "turn", "finish", "breath", "dolphin"]);
 
     if (!normalizedEvents.some(event => event.normalizedMode === "reaction")) warnings.push("reaction missing.");
     if (!normalizedEvents.some(event => event.normalizedMode === "finish")) warnings.push("finish missing.");
@@ -133,7 +133,7 @@ export function validateAnnotationDistances(events, raceDistanceM, poolLengthM) 
                 .find(anchor => anchor.normalizedMode === "reaction" || anchor.normalizedMode === "turn");
             if (!previousAnchor) warnings.push("breakout/end without previous reaction or turn.");
         }
-        if (!["breath", "breakout", "section"].includes(event.normalizedMode)) {
+        if (!["breath", "breakout", "section", "dolphin"].includes(event.normalizedMode)) {
             const distance = Number(event.cumul);
             if (Number.isFinite(distance) && distance < previousDistance - 0.01) warnings.push("distance decreases over time.");
             if (Number.isFinite(distance)) previousDistance = Math.max(previousDistance, distance);
