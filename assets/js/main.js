@@ -252,7 +252,7 @@ export function updateTable() {
     if (curr_swims[selected_swim]) {
         for (let j = 0; j < curr_swims[selected_swim].length; j++) {
             let r = curr_swims[selected_swim][j];
-            const allowedModes = ["enter", "end", "breakout", "respi", "breath", "section", "turn", "finish", "reaction", "cycle", "cycle_gauche", "cycle_droite", "respi_droite", "respi_gauche"];
+            const allowedModes = ["enter", "end", "breakout", "respi", "breath", "section", "turn", "finish", "reaction", "cycle", "cycle_gauche", "cycle_droite", "respi_droite", "respi_gauche", "dolphin"];
             // modes autorisés, a modifier pour ajouter des modes ou en enlever
             if (!allowedModes.includes(r["mode"])) {
                 r["mode"] = "cycle";

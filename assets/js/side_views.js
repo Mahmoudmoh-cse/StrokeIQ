@@ -7,7 +7,7 @@ import { megaData, curr_swims, frame_rate, turn_distances, turn_times, pool_size
 import { selected_swim,sec_to_timestr, focus_time_input, focusout_time_input, min_sec_ms_to_sec, timestr_to_min_sec_ms, updateSwimSwitch } from './refactor-script.js';
 import { add_element_to_data, currate_events } from './data_handler.js';
 import { updateTable } from './main.js';
-import { recalculateCycleMetrics } from './race_distance.js';
+import { normalizeEventMode, recalculateCycleMetrics } from './race_distance.js';
 
 
 
@@ -25,6 +25,7 @@ export function draw_stats(data, D3Instance = d3) {
     let tdat = data.filter(d => d.mode == "cycle")
     drawCycleBars(tdat)
     drawCycleTimeBars(tdat);
+    drawBreathingPattern(data, D3Instance);
 }
 
 
@@ -109,7 +110,7 @@ export function update_swimmer(id) {
     // Synchroniser swim_switch avec le nageur sélectionné
     updateSwimSwitch();
 
-    let data = curr_swims[id];
+    let data = curr_swims[id] || [];
 
     if (data.length > 0) {
         draw_traj(data);
@@ -119,9 +120,104 @@ export function update_swimmer(id) {
             drawCycleBars(tdat);
             drawCycleTimeBars(tdat);
         }
+        drawBreathingPattern(data);
 
+    } else {
+        drawBreathingPattern([]);
     }
 
+}
+
+function readRaceTime(event) {
+    const directTime = Number(event?.["Temps (s)"] ?? event?.Temps);
+    if (Number.isFinite(directTime)) return directTime;
+    return Number(event?.frameId ?? event?.frame_number) / frame_rate;
+}
+
+function readDistance(event) {
+    return Number(event?.["distance (m)"] ?? event?.distance ?? event?.cumul);
+}
+
+/**
+ * @brief Draws a separate breath-only scatter plot for the selected swimmer.
+ *
+ * Breath markers use race time on the x-axis and cumulative distance on the y-axis.
+ * This does not feed breath events into any cycle graph or metric calculation.
+ */
+export function drawBreathingPattern(events, D3Instance = d3) {
+    const svg = D3Instance.select("#breathing_graph");
+    svg.selectAll("*").remove();
+
+    if (svg.empty()) return;
+
+    const points = (events || [])
+        .filter(event => normalizeEventMode(event?.event ?? event?.mode ?? event?.eventId) === "breath")
+        .map(event => ({
+            event,
+            time: readRaceTime(event),
+            distance: readDistance(event),
+        }))
+        .filter(point => Number.isFinite(point.time) && Number.isFinite(point.distance));
+
+    const marginLeft = 30;
+    const maxRaceDistance = Number(megaData?.[0]?.raceDistanceM ?? megaData?.[0]?.distance ?? pool_size[0] ?? 50) || 50;
+
+    if (points.length === 0) {
+        svg.append("text")
+            .attr("x", 100)
+            .attr("y", 96)
+            .attr("text-anchor", "middle")
+            .attr("class", "breathing-empty-label")
+            .style("fill", "#66788a")
+            .style("font-size", "10px")
+            .text("No breath events");
+        svg.append("text")
+            .attr("x", 100)
+            .attr("y", 110)
+            .attr("text-anchor", "middle")
+            .attr("class", "breathing-empty-label")
+            .style("fill", "#66788a")
+            .style("font-size", "10px")
+            .text("annotated.");
+        return;
+    }
+
+    const maxTime = Math.max(...points.map(point => point.time), 1);
+    const maxDistance = Math.max(maxRaceDistance, ...points.map(point => point.distance), 1);
+    const xscale = D3Instance.scaleLinear([0, maxTime], [marginLeft, 190]).nice();
+    const yscale = D3Instance.scaleLinear([maxDistance, 0], [25, 180]).nice();
+
+    svg.append("g")
+        .attr("transform", "translate(0,180)")
+        .call(D3Instance.axisBottom(xscale).ticks(4));
+
+    svg.append("g")
+        .attr("transform", `translate(${marginLeft},0)`)
+        .call(D3Instance.axisLeft(yscale).ticks(5));
+
+    svg.append("g")
+        .attr("class", "breathing-markers")
+        .selectAll("circle")
+        .data(points)
+        .join("circle")
+        .attr("class", "breathing-marker")
+        .attr("cx", point => xscale(point.time))
+        .attr("cy", point => yscale(point.distance))
+        .attr("r", 4)
+        .attr("swim", selected_swim)
+        .attr("num", point => curr_swims[selected_swim]?.indexOf(point.event) ?? -1)
+        .style("fill", "#0f9f8e")
+        .style("stroke", "#083d77")
+        .style("stroke-width", "1");
+
+    svg.append("text")
+        .attr("x", 190)
+        .attr("y", 16)
+        .attr("text-anchor", "end")
+        .style("fill", "#10243a")
+        .style("font-size", "10px")
+        .style("font-weight", "700")
+        .text(`${points.length} breaths`);
 }
 
 /**

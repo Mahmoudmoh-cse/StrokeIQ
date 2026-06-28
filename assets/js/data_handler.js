@@ -246,9 +246,10 @@ export function construct_modify_selected_annotation_table(isEmpty) {
  * @returns {string} Ligne HTML
  */
 export function construct_data_row(data) {
+    let distanceValue = data["distance (m)"] ?? data.distance ?? data.cumul ?? 0;
     let mess = `<tr class='mode-` + data["mode"] + `' data-swimmer='` + data.swimmer + `' data-event='` + curr_swims[data.swimmer].indexOf(data) + `'>` +
         " <td>" + sec_to_timestr(frameId_to_RunTime(data["frame_number"])) + "</td>" +
-        " <td>" + (parseInt(data["cumul"] * 100) / 100).toString() + "</td>" +
+        " <td>" + (Number(distanceValue)).toFixed(2) + "</td>" +
         " <td>" + data["mode"] + "</td>" +
         "</tr>"
     return mess

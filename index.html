@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 @file index.html
 @brief Main web interface for swimming video annotation
 Contains the full user interface with video player, annotation tools,
@@ -9,8 +9,7 @@ D3.js charts, and controls for swimmer performance analysis
 
 <head>
 
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <title>StrokeIQ</title>
     <meta name="description" content="">
@@ -24,21 +23,18 @@ D3.js charts, and controls for swimmer performance analysis
     <script src="assets/js/base64.min.js"></script>
     <script type="module" src="assets/js/main.js"></script>
 
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/skeleton.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/global-refactor.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Favicon -->
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico"> -->
     <link rel="icon" type="image/png" href="assets/images/logo.svg">
 
@@ -46,8 +42,18 @@ D3.js charts, and controls for swimmer performance analysis
 </head>
 
 <body>
-    <!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="strokeiq-app">
+        <!-- New Premium Header -->
+        <header class="strokeiq-header">
+            <div class="strokeiq-header-title">
+                <img src="assets/images/logo.svg" style="height: 24px; filter: brightness(0) invert(1);" alt="StrokeIQ Logo">
+                <h1>StrokeIQ</h1>
+                <span class="strokeiq-header-subtitle">Swimming Performance Analytics</span>
+            </div>
+            <div class="strokeiq-badge strokeiq-badge-info" id="strokeiq-status-badge">Ready</div>
+        </header>
+
+    <!-- Primary Page Layout -->
 
     <div id="r_header">
 
@@ -107,12 +113,9 @@ D3.js charts, and controls for swimmer performance analysis
 
             </div>
             <div id="r_buttons-action">
-                <button id="loadbtn" class="gr">Load</button>
-                <button id="view_data_source" type="button">View</button>
-
-                <button id="download">Download</button>
-
-
+                <button id="loadbtn" class="strokeiq-btn strokeiq-btn-primary">Load</button>
+                <button id="view_data_source" class="strokeiq-btn strokeiq-btn-primary" type="button">View</button>
+                <button id="download" class="strokeiq-btn strokeiq-btn-primary">Download</button>
             </div>
         </div>
         <ul id="workspace-tabs" class="workspace-tabs" role="tablist">
@@ -152,14 +155,6 @@ D3.js charts, and controls for swimmer performance analysis
                 <div id="r_btn-controls">
 
 
-                    <!-- <div class="dropdown">
-                        <button class="dropbtn">⚙️</button>
-                        <div class="dropdown-content">
-                            
-                        </div>
-                    </div> -->
-
-
                     <div id="r_bloc-buttons">
                         <div id="controls">
                             <img id="race-start" src="assets/images/controls/skip-previous.svg" title="Race start"
@@ -194,7 +189,7 @@ D3.js charts, and controls for swimmer performance analysis
 </div> -->
                             <div id="volume_range_all">
                                 <input type="range" min="0" max="1" step="0.05" id="volume_range" value="0">
-                                <p id="volume">🔇</p>
+                                <p id="volume">Vol</p>
                             </div>
 
 
@@ -218,17 +213,16 @@ D3.js charts, and controls for swimmer performance analysis
                     <div id="bottom_data">
 
                         <!-- Apply styled classes to menu buttons -->
-                        <button class="modebtn mode-reaction" name="reaction" id="btn-reaction">Set race start</button>
-                        <button class="modebtn mode-enter" name="enter" id="btn-enter">Water entry</button>
-                        <button class="modebtn mode-end" name="end" id="btn-end">End of glide</button>
-                        <button class="modebtn mode-section" name="section" id="hidd">Intermediate</button>
-                        <button id="ligneRef">Section</button>
-                        <button class="modebtn mode-turn" name="turn" id="btn-turn">Turn</button>
-                        <button class="modebtn mode-finish" name="finish" id="btn-finish">Finish</button>
-                        <button class="modebtn mode-cycle-fade r_boutons active selected" name="cycle"
-                            id="btn-cycle">Cycle</button>
-                        <button class="modebtn mode-respi-fade" name="respi" id="btn-respi">Breath</button>
-                        <button class="modebtn mode-dolphin-fade" name="dolphin" id="btn-dolphin">Dolphin Kick</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-reaction" name="reaction" id="btn-reaction">Set race start</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-turn" name="enter" id="btn-enter">Water entry</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-turn" name="end" id="btn-end">End of glide</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-breakout" name="section" id="hidd">Intermediate</button>
+                        <button id="ligneRef" class="strokeiq-btn strokeiq-btn-primary">Section</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-turn" name="turn" id="btn-turn">Turn</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-finish" name="finish" id="btn-finish">Finish</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-cycle active selected" name="cycle" id="btn-cycle">Cycle</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-breath" name="respi" id="btn-respi">Breath</button>
+                        <button class="modebtn strokeiq-btn strokeiq-btn-dolphin" name="dolphin" id="btn-dolphin">Dolphin Kick</button>
                         <select class="u-half-width" id="video_size_select" aria-label="Video size"
                             title="Video size">
                             <option value="small" selected>small video</option>
@@ -280,8 +274,8 @@ D3.js charts, and controls for swimmer performance analysis
                             </label>
                             <span id="expectedTurnsDisplay">Expected turns: --</span>
                             <span id="expectedTurnDistancesDisplay">Turn distances: --</span>
-                            <button id="cleanupExtraSwimmers" type="button">Remove extra swimmers</button>
-                            <button id="normalizeCsv" type="button">Normalize CSV</button>
+                            <button id="cleanupExtraSwimmers" class="strokeiq-btn strokeiq-btn-danger" type="button">Remove extra swimmers</button>
+                            <button id="normalizeCsv" class="strokeiq-btn strokeiq-btn-primary" type="button">Normalize CSV</button>
                         </div>
                         <div id="annotation-status" class="annotation-status">
                             <strong>Annotation status</strong>
@@ -324,12 +318,12 @@ D3.js charts, and controls for swimmer performance analysis
                         <br>
 
 
-                        <button id="vidsw">Switch side</button>
-                        <button id="hidlab">Hide text</button>
-                        <button id="resetZoom" class="r_boutons">Reset Zoom</button>
-                        <button id="download">Download</button>
+                        <button id="vidsw" class="strokeiq-btn strokeiq-btn-primary">Switch side</button>
+                        <button id="hidlab" class="strokeiq-btn strokeiq-btn-primary">Hide text</button>
+                        <button id="resetZoom" class="strokeiq-btn strokeiq-btn-primary">Reset Zoom</button>
+                        <button id="download" class="strokeiq-btn strokeiq-btn-primary">Download</button>
                         <div class="vid_dessus">
-                            <button id="vid_dessus">top view</button>
+                            <button id="vid_dessus" class="strokeiq-btn strokeiq-btn-primary">top view</button>
                         </div>
 
 
@@ -357,8 +351,8 @@ D3.js charts, and controls for swimmer performance analysis
                         <select class="u-half-width" id="swim_switch"></select>
 
                     </div>
-                    <button id="botn"><b>Validate</b></button>
-                    <button id="clr"><b>Clear lane</b></button>
+                    <button id="botn" class="strokeiq-btn strokeiq-btn-primary">Validate</button>
+                    <button id="clr" class="strokeiq-btn strokeiq-btn-danger">Clear lane</button>
 
                 </div>
 
@@ -375,12 +369,11 @@ D3.js charts, and controls for swimmer performance analysis
 
                 <!-- Tab links -->
                 <div class="tab tab-side flex-space-between">
-                    <button class="sideTabLinks active" id="tab-data-entry">⏱</button>
-                    <button class="sideTabLinks" id="tab-verification-charts">📊</button>
-                    <button class="sideTabLinks" id="tab-data-plot-tout">📋</button>
-                    <button class="sideTabLinks" id="tab-modify-selected-annotation">🛠</button>
-                    <button class="sideTabLinks" id="tab-advanced-analysis">🔬</button>
-                    <!-- <button class="sideTabLinks" id="tab-parameters">⚙️</button> -->
+                    <button class="sideTabLinks active" id="tab-data-entry" title="Times">T</button>
+                    <button class="sideTabLinks" id="tab-verification-charts" title="Graphs">G</button>
+                    <button class="sideTabLinks" id="tab-data-plot-tout" title="Rows">R</button>
+                    <button class="sideTabLinks" id="tab-modify-selected-annotation" title="Edit">E</button>
+                    <button class="sideTabLinks" id="tab-advanced-analysis" title="Advanced">Adv</button>
                 </div>
 
 
@@ -390,19 +383,20 @@ D3.js charts, and controls for swimmer performance analysis
 
                 <!-- Tab Content Data entry-->
                 <div id="data_plot_tout" class="side_tab_content">
-                    <label>All cycles</label>
-
-                    <table class="center">
-                        <thead>
-                            <tr>
-                                <th>Time</th>
-                                <th>Distance</th>
-                                <th>Type</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table_bod" height="200">
-                        </tbody>
-                    </table>
+                    <div class="strokeiq-card">
+                        <p class="strokeiq-card-title">All cycles</p>
+                        <table class="center advanced-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Distance</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_bod" height="200">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
 
@@ -434,6 +428,13 @@ D3.js charts, and controls for swimmer performance analysis
 
                         </svg>
 
+                    </div>
+
+                    <div id="r_div-breathing-pattern">
+                        <p>Breathing pattern</p>
+                        <svg id="breathing_graph" viewBox="0 0 200 200">
+
+                        </svg>
                     </div>
                 </div>
 
@@ -507,9 +508,9 @@ D3.js charts, and controls for swimmer performance analysis
                             </thead>
                             <tbody id="modify_selected_annotation_table" height="40"></tbody>
                         </table>
-                        <button id="del"><img src="assets/images/controls/bin.png"></button>
-                        <button id="left-m">
-                            < </button><button id="right-m"> > </button>
+                        <button id="del" class="strokeiq-btn strokeiq-btn-danger"><img src="assets/images/controls/bin.png"></button>
+                        <button id="left-m" class="strokeiq-btn strokeiq-btn-primary"> &lt; </button>
+                        <button id="right-m" class="strokeiq-btn strokeiq-btn-primary"> &gt; </button>
                                 <p>&nbsp</p>
                                 <p class="shortParagraph">Correction offset (cm): </p>
                                 <input type="number" id="deplacementCorrection" value=5>
@@ -517,27 +518,24 @@ D3.js charts, and controls for swimmer performance analysis
                     </div>
                 </div>
 
-                <!-- Tab Content Advanced Analysis-->
                 <div id="advanced_analysis" class="side_tab_content">
                     <label>Advanced Analysis</label>
                     <div id="advanced-analysis-container"></div>
-                    <button id="btn-advanced-analysis" class="advanced-btn">Run Analysis</button>
-                    <button id="btn-download-advanced" class="advanced-btn">Download Advanced CSV</button>
-                    <button id="btn-convert-dolphin" class="advanced-btn" style="background-color: #8a2be2;">Convert Underwater Cycles to Dolphin</button>
+                    <div class="advanced-analysis-actions">
+                        <button id="btn-advanced-analysis" class="strokeiq-btn strokeiq-btn-primary" type="button">Run Analysis</button>
+                        <button id="btn-download-advanced" class="strokeiq-btn strokeiq-btn-primary" type="button">Download Advanced CSV</button>
+                        <button id="btn-convert-dolphin" class="strokeiq-btn strokeiq-btn-dolphin" type="button">Convert Underwater Cycles to Dolphin</button>
+                        <button id="btn-generate-coach-report" class="strokeiq-btn strokeiq-btn-primary" type="button">Generate Coach Report</button>
+                        <button id="btn-download-coach-report" class="strokeiq-btn strokeiq-btn-primary" type="button">Download Coach Report</button>
+                        <button id="btn-download-summary-json" class="strokeiq-btn strokeiq-btn-primary" type="button">Download Summary JSON</button>
+                        <button id="btn-export-race-package" class="strokeiq-btn strokeiq-btn-primary" type="button">Export Full Race Package</button>
+                    </div>
+                    <div id="coach-report-container" class="coach-report-container">
+                        <div class="coach-report-empty">Generate a Coach Report to view performance scores, recommendations, strengths, warnings, and validation results.</div>
+                    </div>
                 </div>
 
             </div>
-
-            <div class="row">
-
-
-            </div>
-
-
-
-
-
-
 
 
 
@@ -714,7 +712,7 @@ D3.js charts, and controls for swimmer performance analysis
         </section>
     </div>
 
-
+    </div> <!-- Close strokeiq-app -->
 
     <!-- Bootstrap include -->
 

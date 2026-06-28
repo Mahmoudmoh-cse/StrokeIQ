@@ -213,6 +213,28 @@ describe('CSV annotation normalization', () => {
     expect(cycles[3]).toBeLessThan(100);
   });
 
+  it('keeps distance cumulative across turns when raw cycle distances reset each length', () => {
+    const result = normalizeAnnotations([
+      { swimmerId: 0, mode: 'reaction', 'TempsVideo (s)': 4.3, cumul: 0 },
+      { swimmerId: 0, mode: 'cycle', 'TempsVideo (s)': 9.3, cumul: 10 },
+      { swimmerId: 0, mode: 'turn', 'TempsVideo (s)': 14.3, cumul: 25 },
+      { swimmerId: 0, mode: 'cycle', 'TempsVideo (s)': 19.3, cumul: 5 },
+      { swimmerId: 0, mode: 'turn', 'TempsVideo (s)': 24.3, cumul: 50 },
+      { swimmerId: 0, mode: 'cycle', 'TempsVideo (s)': 29.3, cumul: 8 },
+      { swimmerId: 0, mode: 'turn', 'TempsVideo (s)': 34.3, cumul: 75 },
+      { swimmerId: 0, mode: 'cycle', 'TempsVideo (s)': 39.3, cumul: 12 },
+      { swimmerId: 0, mode: 'finish', 'TempsVideo (s)': 44.3, cumul: 100 },
+    ], config100x25);
+
+    const distances = result.events.map(event => event.cumul);
+    expect(distances).toEqual([...distances].sort((a, b) => a - b));
+
+    const cycles = result.events.filter(event => event.mode === 'cycle');
+    expect(cycles.map(event => event.cumul)).toEqual([12.5, 37.5, 62.5, 87.5]);
+    expect(cycles[1]['amplitude (m)']).toBe('25.00');
+    expect(cycles[1]['vitesse (m/s)']).toBe('2.50');
+  });
+
   it('filters extra swimmers during normalization', () => {
     const result = normalizeAnnotations([
       { swimmerId: 0, mode: 'reaction', 'TempsVideo (s)': 4.3 },

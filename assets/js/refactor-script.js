@@ -20,6 +20,7 @@ import { getSportsdataSaveFormatId } from './local_api.js';
 import { cleanupExtraSwimmers, getExpectedTurns, getExpectedTurnDistances, getNextTurnDistance as getExpectedNextTurnDistance, hasValidCalibration, isValidSwimmerId, normalizeAnnotations, normalizeNumberOfSwimmers, validateAnnotationDistances, validateRaceConfig, validateSwimmerCountEvents, recalculateCycleMetrics, interpolateDistanceFromAnchors } from './race_distance.js';
 import { displayRunPart } from './display_labels.js';
 import { calculateAdvancedAnalysis, renderAdvancedAnalysis, exportAdvancedAnalysisCsv } from './advanced_analysis.js';
+import { exportCoachReportHtml, exportFullRacePackage, exportSummaryJson, generateCoachInsights, renderCoachReport } from './coach_report.js';
 
 
 export let video_volume = 0;
@@ -45,6 +46,9 @@ export let mode = "cycle"// Modifié dans les boutons de classe modebtn (enter :
 export let flipper = false;// Boolean correspondant à : est-ce qu'on a séléctionné une annotation ?
 const codeNaNforDownload = "";// Lors du téléchargement des données, si une donnée est NaN, elle sera remplacé par codeNaNforDownload
 let normalization_in_progress = false;
+let latestAdvancedAnalysis = null;
+let latestAdvancedAnalysisConfig = null;
+let latestCoachReport = null;
 //choose_right_plot({"checked":false});
 choose_tab(null,"data_entry",'side_tab_content','sideTabLinks')
 construct_modify_selected_annotation_table(true)
@@ -1348,7 +1352,11 @@ export function clic_souris_video(e) {
                         r["vitesse (m/s)"] ?? ""
                     ])
                 } else {
-                    rows.push([r["frame_number"], (swimId), nageur, lane, distanceRow, eventRow, eventXRow, eventYRow, eventRow, tempsVideo, tempsRow, distanceRow])
+                    rows.push([
+                        r["frame_number"], (swimId), nageur, lane, distanceRow, eventRow, eventXRow, eventYRow, 
+                        eventRow, tempsVideo, tempsRow, distanceRow, 
+                        "", "", "", ""
+                    ])
                 }
 
             }
@@ -1745,6 +1753,53 @@ let pt=[0,0];
         vue_du_dessus = x;
     }
 
+    function getCurrentRaceConfig() {
+        const swimmerName = getSwimmerName(megaData?.[0], selected_swim) || "Unknown";
+        const lane = "ligne" + (Number(selected_swim) + 1);
+        return {
+            raceDistanceM: Number(document.getElementById("raceDistanceM")?.value || megaData?.[0]?.raceDistanceM || megaData?.[0]?.distance || 25),
+            poolLengthM: Number(document.getElementById("poolLengthM")?.value || megaData?.[0]?.poolLengthM || megaData?.[0]?.taille_piscine?.[0] || 25),
+            distanceMode: document.getElementById("distanceMode")?.value || megaData?.[0]?.distanceMode || "interpolated",
+            swimmerName,
+            lane
+        };
+    }
+
+    function copySelectedSwimmerEvents() {
+        return (curr_swims[selected_swim] || []).map(event => ({ ...event }));
+    }
+
+    function getOrCalculateAdvancedAnalysis(events, raceConfig) {
+        const configMatches = latestAdvancedAnalysisConfig
+            && latestAdvancedAnalysisConfig.raceDistanceM === raceConfig.raceDistanceM
+            && latestAdvancedAnalysisConfig.poolLengthM === raceConfig.poolLengthM;
+        if (latestAdvancedAnalysis && configMatches) {
+            return latestAdvancedAnalysis;
+        }
+        const analysis = calculateAdvancedAnalysis(events, raceConfig);
+        latestAdvancedAnalysis = analysis;
+        latestAdvancedAnalysisConfig = {
+            raceDistanceM: raceConfig.raceDistanceM,
+            poolLengthM: raceConfig.poolLengthM
+        };
+        return analysis;
+    }
+
+    function generateCoachReportForCurrentSelection({ render = true } = {}) {
+        const events = copySelectedSwimmerEvents();
+        if (events.length === 0) {
+            alert("No events to analyze.");
+            return null;
+        }
+        const raceConfig = getCurrentRaceConfig();
+        const analysis = getOrCalculateAdvancedAnalysis(events, raceConfig);
+        latestCoachReport = generateCoachInsights(analysis, events, raceConfig);
+        if (render) {
+            renderCoachReport(latestCoachReport, document.getElementById("coach-report-container"));
+        }
+        return latestCoachReport;
+    }
+
     window.addEventListener('DOMContentLoaded', function() {
         // Remplace les onclick inline par des listeners JS
         document.getElementById('btn-reaction')?.addEventListener('click', function () {
@@ -1803,20 +1858,22 @@ let pt=[0,0];
                 poolLengthM: Number(document.getElementById("poolLengthM")?.value || 25)
             };
             const analysis = calculateAdvancedAnalysis(events, raceConfig);
+            latestAdvancedAnalysis = analysis;
+            latestAdvancedAnalysisConfig = raceConfig;
             renderAdvancedAnalysis(analysis, document.getElementById('advanced-analysis-container'));
         });
         document.getElementById('btn-convert-dolphin')?.addEventListener('click', function() {
+            if (selected_swim === null || selected_swim === undefined) return alert("No selected swimmer.");
             const events = curr_swims[selected_swim];
-            if (!events || events.length === 0) return alert("No events found for selected swimmer.");
+            if (!events || events.length === 0) return alert("No selected swimmer (no events found).");
             
             let convertedCount = 0;
-            const raceConfig = {
-                raceDistanceM: Number(document.getElementById("raceDistanceM")?.value || 25),
-                poolLengthM: Number(document.getElementById("poolLengthM")?.value || 25)
-            };
             
             const anchors = events.filter(e => ["reaction", "turn"].includes(normalizeEventMode(e.mode || e.event || e.eventId))).sort((a, b) => Number(a["Temps (s)"]) - Number(b["Temps (s)"]));
             const breakouts = events.filter(e => ["breakout", "end", "finish"].includes(normalizeEventMode(e.mode || e.event || e.eventId))).sort((a, b) => Number(a["Temps (s)"]) - Number(b["Temps (s)"]));
+            
+            if (anchors.length === 0) return alert("No reaction found");
+            if (breakouts.length === 0) return alert("No breakout/end found");
             
             for (const anchor of anchors) {
                 const phaseStart = Number(anchor["Temps (s)"]);
@@ -1844,10 +1901,10 @@ let pt=[0,0];
                 updateBarsFromEvent(selected_swim, true);
                 draw_stats(curr_swims[selected_swim]);
                 updateTable();
-                alert("Successfully converted " + convertedCount + " underwater cycles to dolphin kicks.");
+                alert(`Converted ${convertedCount} underwater cycle rows to dolphin kicks.`);
                 document.getElementById('btn-advanced-analysis')?.click();
             } else {
-                alert("No underwater cycles found to convert.");
+                alert("No underwater cycle rows found");
             }
         });
         document.getElementById('btn-download-advanced')?.addEventListener('click', function() {
@@ -1857,7 +1914,13 @@ let pt=[0,0];
                 raceDistanceM: Number(document.getElementById("raceDistanceM")?.value || 25),
                 poolLengthM: Number(document.getElementById("poolLengthM")?.value || 25)
             };
-            const analysis = calculateAdvancedAnalysis(events, raceConfig);
+            const analysis = latestAdvancedAnalysis && latestAdvancedAnalysisConfig
+                && latestAdvancedAnalysisConfig.raceDistanceM === raceConfig.raceDistanceM
+                && latestAdvancedAnalysisConfig.poolLengthM === raceConfig.poolLengthM
+                ? latestAdvancedAnalysis
+                : calculateAdvancedAnalysis(events, raceConfig);
+            latestAdvancedAnalysis = analysis;
+            latestAdvancedAnalysisConfig = raceConfig;
             
             const eventSwimmerName = events.find(e => e.swimmerName)?.swimmerName;
             const swimmerName = eventSwimmerName || getSwimmerName(megaData?.[0], selected_swim) || "Unknown";
@@ -1865,7 +1928,22 @@ let pt=[0,0];
             const eventLane = events.find(e => e.lane)?.lane;
             const lane = eventLane || ("ligne" + (selected_swim + 1));
             
-            exportAdvancedAnalysisCsv(analysis, swimmerName, lane);
+            exportAdvancedAnalysisCsv(analysis, swimmerName, lane, raceConfig);
+        });
+        document.getElementById('btn-generate-coach-report')?.addEventListener('click', function() {
+            generateCoachReportForCurrentSelection({ render: true });
+        });
+        document.getElementById('btn-download-coach-report')?.addEventListener('click', function() {
+            const report = generateCoachReportForCurrentSelection({ render: true });
+            if (report) exportCoachReportHtml(report);
+        });
+        document.getElementById('btn-download-summary-json')?.addEventListener('click', function() {
+            const report = generateCoachReportForCurrentSelection({ render: true });
+            if (report) exportSummaryJson(report);
+        });
+        document.getElementById('btn-export-race-package')?.addEventListener('click', function() {
+            const report = generateCoachReportForCurrentSelection({ render: true });
+            if (report) exportFullRacePackage(report);
         });
     });
 

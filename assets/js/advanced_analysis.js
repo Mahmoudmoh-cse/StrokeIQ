@@ -292,6 +292,11 @@ export function calculateAdvancedAnalysis(events, raceConfig) {
         dolphin.warnings.push("dolphin accidentally included in cycle metrics");
     }
 
+    const hasInterpolated = safeEvents.some(e => String(e.distanceSource).includes("interpolated"));
+    if (hasInterpolated) {
+        summary.warnings.push("Speed is estimated from interpolated distance; per-cycle speed may appear constant.");
+    }
+
     return {
         summary,
         splits,
@@ -303,52 +308,60 @@ export function calculateAdvancedAnalysis(events, raceConfig) {
 }
 
 // 8. Export CSV
-export function exportAdvancedAnalysisCsv(analysis, swimmerName, lane) {
+export function exportAdvancedAnalysisCsv(analysis, swimmerName, lane, raceConfig) {
     let csvRows = [];
-    const headers = ["metricType", "swimmerName", "lane", "phase_or_split_index", "kick_index", "start_time", "end_time", "start_distance", "end_distance", "value1", "value2", "value3", "warning"];
+    const safeRaceConfig = raceConfig || {};
+    const headers = ["metricType", "swimmerName", "lane", "phase_or_split_index", "kick_index", "start_time", "end_time", "start_distance", "end_distance", "metric_time", "metric_speed", "metric_count1", "metric_count2", "metric_count3", "warning"];
     csvRows.push(headers.join(","));
 
-    function addRow(type, idx, kIdx, st, et, sd, ed, v1, v2, v3, warn) {
+    function fS(val, decimals) {
+        if (val === null || val === undefined || isNaN(val)) return "";
+        return Number(val).toFixed(decimals);
+    }
+
+    function addRow(type, idx, kIdx, st, et, sd, ed, vTime, vSpeed, c1, c2, c3, warn) {
         const row = [
             type, swimmerName, lane, 
-            idx !== null ? idx : "", 
-            kIdx !== null ? kIdx : "", 
-            st !== null && st !== undefined && !isNaN(st) ? Number(st).toFixed(3) : "", 
-            et !== null && et !== undefined && !isNaN(et) ? Number(et).toFixed(3) : "", 
-            sd !== null && sd !== undefined && !isNaN(sd) ? Number(sd).toFixed(2) : "", 
-            ed !== null && ed !== undefined && !isNaN(ed) ? Number(ed).toFixed(2) : "", 
-            v1 !== null && v1 !== undefined && !isNaN(v1) ? Number(v1).toFixed(3) : "", 
-            v2 !== null && v2 !== undefined && !isNaN(v2) ? Number(v2).toFixed(3) : "", 
-            v3 !== null && v3 !== undefined && !isNaN(v3) ? Number(v3).toFixed(3) : "", 
+            idx !== null && idx !== undefined ? idx : "", 
+            kIdx !== null && kIdx !== undefined ? kIdx : "", 
+            fS(st, 3), fS(et, 3), fS(sd, 2), fS(ed, 2), 
+            fS(vTime, 3), fS(vSpeed, 3), 
+            c1 !== null && c1 !== undefined ? c1 : "", 
+            c2 !== null && c2 !== undefined ? c2 : "", 
+            c3 !== null && c3 !== undefined ? c3 : "", 
             warn || ""
         ];
         csvRows.push(row.map(r => '"' + r + '"').join(","));
     }
 
-    addRow("race_summary", null, null, analysis.summary.reactionTime, analysis.summary.finishTime, 0, null, analysis.summary.totalRaceTime, analysis.summary.averageSpeedMps, analysis.strokeCount, analysis.summary.warnings.join("; "));
+    let totalDolphins = analysis.dolphin.kickAnalysis.length;
+    addRow("race_summary", null, null, analysis.summary.reactionTime, analysis.summary.finishTime, 0, safeRaceConfig.raceDistanceM, analysis.summary.totalRaceTime, analysis.summary.averageSpeedMps, analysis.strokeCount, analysis.breathing.totalBreaths, totalDolphins, analysis.summary.warnings.join("; "));
 
     analysis.splits.forEach(s => {
-        addRow("split", s.index, null, s.startTime, s.endTime, s.startDistance, s.endDistance, s.splitTime, s.splitSpeed, s.strokeCount, s.warning);
+        addRow("split", s.index, null, s.startTime, s.endTime, s.startDistance, s.endDistance, s.splitTime, s.splitSpeed, s.strokeCount, s.breathCount, null, s.warning);
     });
 
     analysis.underwaterPhases.forEach(u => {
-        addRow("underwater", u.phaseIndex, null, u.startTime, u.breakoutTime, u.startDistance, u.breakoutDistance, u.underwaterTime, u.underwaterDistance, null, u.warning);
+        const phaseDolphins = analysis.dolphin.phaseAnalysis.find(p => p.phaseIndex === u.phaseIndex);
+        const dkCount = phaseDolphins ? phaseDolphins.dolphinKickCount : 0;
+        addRow("underwater", u.phaseIndex, null, u.startTime, u.breakoutTime, u.startDistance, u.breakoutDistance, u.underwaterTime, null, dkCount, null, null, u.warning);
     });
 
     analysis.dolphin.phaseAnalysis.forEach(p => {
-        addRow("dolphin_phase", p.phaseIndex, null, null, null, null, null, p.dolphinKickCount, p.dolphinKickFrequencyPerMinute, p.avgUnderwaterSpeed, p.warning);
-    });
-    analysis.dolphin.kickAnalysis.forEach(k => {
-        addRow("dolphin_kick", k.phaseIndex, k.kickIndex, k.time, null, k.distance, null, k.tempo, k.distFromPrev, k.speed, null);
+        addRow("dolphin_phase", p.phaseIndex, null, null, null, null, null, null, p.avgUnderwaterSpeed, p.dolphinKickCount, p.dolphinKickFrequencyPerMinute, p.avgDistPerKick, p.warning);
     });
 
-    addRow("breathing", null, null, null, null, null, null, analysis.breathing.totalBreaths, analysis.breathing.breathsPerMinute, analysis.breathing.cyclesPerBreath, analysis.breathing.warnings.join("; "));
+    analysis.dolphin.kickAnalysis.forEach(k => {
+        addRow("dolphin_kick", k.phaseIndex, k.kickIndex, null, k.time, null, k.distance, k.tempo, k.speed, null, null, null, null);
+    });
+
+    addRow("breathing", null, null, null, null, null, null, null, null, analysis.breathing.totalBreaths, analysis.breathing.breathsPerMinute, analysis.breathing.cyclesPerBreath, analysis.breathing.warnings.join("; "));
 
     const csvContent = "data:text/csv;charset=utf-8," + csvRows.join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "advanced_analysis_lane" + lane + ".csv");
+    link.setAttribute("download", "advanced_analysis.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -367,14 +380,36 @@ export function renderAdvancedAnalysis(analysis, container) {
         let wArray = Array.isArray(warns) ? warns : [warns];
         wArray = wArray.filter(w => w);
         if (wArray.length === 0) return "";
-        return wArray.map(w => '<span class="advanced-badge advanced-badge-warning">' + w + '</span>').join(" ");
+        return wArray.map(w => '<span class="strokeiq-badge strokeiq-badge-warning">' + w + '</span>').join(" ");
     };
 
     let html = '<div class="advanced-dashboard">';
 
+    // Aggregate all warnings
+    const allWarnings = new Set();
+    if (analysis.summary.warnings) analysis.summary.warnings.forEach(w => allWarnings.add(w));
+    if (analysis.dolphin.warnings) analysis.dolphin.warnings.forEach(w => allWarnings.add(w));
+    if (analysis.breathing.warnings) analysis.breathing.warnings.forEach(w => allWarnings.add(w));
+    analysis.splits.forEach(s => { if (s.warning) allWarnings.add(s.warning); });
+    analysis.underwaterPhases.forEach(u => { if (u.warning) allWarnings.add(u.warning); });
+
+    if (analysis.dolphin.kickAnalysis.length === 0) allWarnings.add("no dolphin kicks");
+    if (analysis.breathing.totalBreaths === 0) allWarnings.add("no breath annotations");
+
+    if (allWarnings.size > 0) {
+        html += `
+            <div class="analysis-warnings-panel">
+                <h4>Analysis Warnings</h4>
+                <ul>
+                    ${Array.from(allWarnings).map(w => `<li>${w}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
     html += `
-        <div class="advanced-card">
-            <h3>Race Summary</h3>
+        <div class="strokeiq-card">
+            <h3 class="strokeiq-card-title">Race Summary</h3>
             <div class="advanced-stats-grid">
                 <div class="stat-box"><span>Total Time</span><strong>${fN(analysis.summary.totalRaceTime)}s</strong></div>
                 <div class="stat-box"><span>Avg Speed</span><strong>${fN(analysis.summary.averageSpeedMps)} m/s</strong></div>
@@ -385,8 +420,8 @@ export function renderAdvancedAnalysis(analysis, container) {
     `;
 
     html += `
-        <div class="advanced-card advanced-section">
-            <h3>Split Analysis</h3>
+        <div class="strokeiq-card">
+            <h3 class="strokeiq-card-title">Split Analysis</h3>
             <table class="advanced-table">
                 <thead>
                     <tr>
@@ -417,9 +452,9 @@ export function renderAdvancedAnalysis(analysis, container) {
     `;
 
     html += `
-        <div class="advanced-card advanced-section">
-            <h3>Underwater Phases</h3>
-            ${analysis.underwaterPhases.length === 0 ? '<p class="advanced-empty">No underwater phases found.</p>' : `
+        <div class="strokeiq-card">
+            <h3 class="strokeiq-card-title">Underwater Phases</h3>
+            ${analysis.underwaterPhases.length === 0 ? '<div class="strokeiq-empty-state">No underwater phases found.</div>' : `
             <table class="advanced-table">
                 <thead>
                     <tr>
@@ -447,10 +482,10 @@ export function renderAdvancedAnalysis(analysis, container) {
     `;
 
     html += `
-        <div class="advanced-card advanced-section">
-            <h3>Dolphin Kicks</h3>
+        <div class="strokeiq-card">
+            <h3 class="strokeiq-card-title">Dolphin Kicks</h3>
             ${formatWarnings(analysis.dolphin.warnings)}
-            ${analysis.dolphin.phaseAnalysis.length === 0 ? '<p class="advanced-empty">No dolphin kicks found.</p>' : `
+            ${analysis.dolphin.phaseAnalysis.length === 0 ? '<div class="strokeiq-empty-state">No dolphin kicks found.</div>' : `
             <table class="advanced-table">
                 <thead>
                     <tr>
@@ -479,9 +514,9 @@ export function renderAdvancedAnalysis(analysis, container) {
 
     if (analysis.dolphin.kickAnalysis.length > 0) {
         html += `
-            <div class="advanced-card advanced-section">
+            <div class="strokeiq-card">
                 <details>
-                    <summary>Dolphin Kick Details</summary>
+                    <summary class="strokeiq-card-title" style="border:none; margin:0; padding:0; display:inline-block;">Dolphin Kick Details</summary>
                     <table class="advanced-table mt-2">
                         <thead>
                             <tr>
@@ -512,10 +547,10 @@ export function renderAdvancedAnalysis(analysis, container) {
     }
 
     html += `
-        <div class="advanced-card advanced-section">
-            <h3>Breathing</h3>
+        <div class="strokeiq-card">
+            <h3 class="strokeiq-card-title">Breathing Analysis</h3>
             ${formatWarnings(analysis.breathing.warnings)}
-            ${analysis.breathing.totalBreaths === 0 ? '<p class="advanced-empty">No breath events annotated.</p>' : `
+            ${analysis.breathing.totalBreaths === 0 ? '<div class="strokeiq-empty-state">No breath events annotated.</div>' : `
             <div class="advanced-stats-grid">
                 <div class="stat-box"><span>Total Breaths</span><strong>${analysis.breathing.totalBreaths}</strong></div>
                 <div class="stat-box"><span>Breaths / Min</span><strong>${fN(analysis.breathing.breathsPerMinute)}</strong></div>
